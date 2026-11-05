@@ -41,7 +41,7 @@ export default function ModernizeSection({ onOpenContact }) {
 
               {/* Decorative engineering spec card */}
               <div className="hidden sm:flex absolute -bottom-4 -right-4 bg-white border border-gray-200 rounded-xl shadow-xl p-4 items-center gap-3.5 max-w-xs">
-                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-700 shrink-0">
+                <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-[#E87121] shrink-0 border border-orange-100">
                   <TrendingUp className="w-5 h-5" />
                 </div>
                 <div>
@@ -55,7 +55,7 @@ export default function ModernizeSection({ onOpenContact }) {
           {/* Right Column: Copy & Checklist */}
           <div className="lg:col-span-7 xl:col-span-7">
             {/* Eyebrow */}
-            <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-700 mb-3">
+            <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-3">
               THE AFFORDABLE ROUTE
             </div>
 
@@ -69,13 +69,13 @@ export default function ModernizeSection({ onOpenContact }) {
               A fifteen-year-old line does not need replacing to behave like a newer one. We add the sensing, control and monitoring it was built without — no new machine, and no months of production lost to a rebuild.
             </p>
 
-            {/* Bullet Points with Blue Icons */}
+            {/* Bullet Points with Crabster Orange Icons */}
             <div className="space-y-4 mb-9 max-w-2xl">
               {points.map((pt, idx) => {
                 const Icon = pt.icon;
                 return (
                   <div key={idx} className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center shrink-0 mt-0.5 border border-blue-100">
+                    <div className="w-8 h-8 rounded-lg bg-orange-50 text-[#E87121] flex items-center justify-center shrink-0 mt-0.5 border border-orange-200">
                       <Icon className="w-4 h-4 stroke-[2]" />
                     </div>
                     <p className="text-base sm:text-lg text-gray-800 font-medium leading-relaxed">
@@ -90,10 +90,10 @@ export default function ModernizeSection({ onOpenContact }) {
             <div>
               <button
                 onClick={onOpenContact}
-                className="inline-flex items-center gap-2 px-7 py-3.5 text-sm sm:text-base font-semibold text-[#0E3B64] bg-white border border-gray-300 hover:border-gray-400 hover:bg-gray-50 active:scale-[0.98] rounded transition-all duration-150"
+                className="inline-flex items-center gap-2 px-7 py-3.5 text-sm sm:text-base font-semibold text-gray-900 bg-white border border-gray-300 hover:border-[#E87121] hover:text-[#E87121] hover:bg-orange-50/40 active:scale-[0.98] rounded-md transition-all duration-150"
               >
                 <span>How production automation works</span>
-                <ArrowRight className="w-4 h-4 text-blue-800" />
+                <ArrowRight className="w-4 h-4 text-[#E87121]" />
               </button>
             </div>
 

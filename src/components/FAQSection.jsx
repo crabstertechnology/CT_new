@@ -49,7 +49,7 @@ export default function FAQSection() {
         
         {/* Section Header */}
         <div className="max-w-4xl mb-12 sm:mb-14">
-          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-700 mb-2.5">
+          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2.5">
             COMMON QUESTIONS
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-950 tracking-tight leading-tight">
@@ -71,14 +71,14 @@ export default function FAQSection() {
                   className="w-full flex items-center justify-between text-left group focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-950 group-hover:text-blue-900 transition-colors pr-6">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-950 group-hover:text-[#E87121] transition-colors pr-6">
                     {faq.question}
                   </h3>
-                  <div className="text-blue-700 shrink-0">
+                  <div className="text-[#E87121] shrink-0">
                     {isOpen ? (
-                      <ChevronUp className="w-5 h-5 stroke-[2]" />
+                      <ChevronUp className="w-5 h-5 stroke-[2.5]" />
                     ) : (
-                      <ChevronDown className="w-5 h-5 stroke-[2] text-gray-400 group-hover:text-blue-700" />
+                      <ChevronDown className="w-5 h-5 stroke-[2] text-gray-400 group-hover:text-[#E87121]" />
                     )}
                   </div>
                 </button>

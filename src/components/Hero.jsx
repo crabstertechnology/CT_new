@@ -12,7 +12,7 @@ export default function Hero({ onOpenContact }) {
           {/* Left Column: Value Proposition & Copy */}
           <div className="lg:col-span-7 xl:col-span-7">
             {/* Tagline / Eyebrow */}
-            <div className="inline-flex items-center text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-700 mb-4 sm:mb-5">
+            <div className="inline-flex items-center text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-4 sm:mb-5">
               INDUSTRIAL IOT, PANELS &amp; AUTOMATION — COIMBATORE
             </div>
 
@@ -30,14 +30,14 @@ export default function Hero({ onOpenContact }) {
             <div className="flex flex-wrap items-center gap-4">
               <button
                 onClick={onOpenContact}
-                className="px-7 py-3.5 text-sm sm:text-base font-semibold text-white bg-[#0E3B64] hover:bg-[#092645] active:scale-[0.98] rounded shadow-sm transition-all duration-150"
+                className="px-7 py-3.5 text-sm sm:text-base font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-md shadow-lg shadow-orange-500/25 transition-all duration-150"
               >
                 Talk to an engineer
               </button>
 
               <a
                 href="#services"
-                className="px-7 py-3.5 text-sm sm:text-base font-semibold text-[#0E3B64] bg-white border border-gray-300 hover:border-gray-400 hover:bg-gray-50 active:scale-[0.98] rounded transition-all duration-150"
+                className="px-7 py-3.5 text-sm sm:text-base font-semibold text-gray-800 bg-white border border-gray-300 hover:border-[#E87121] hover:text-[#E87121] hover:bg-orange-50/40 active:scale-[0.98] rounded-md transition-all duration-150"
               >
                 Explore our services
               </a>
@@ -46,15 +46,15 @@ export default function Hero({ onOpenContact }) {
             {/* Trust Badges */}
             <div className="mt-12 pt-6 border-t border-gray-100 flex flex-wrap items-center gap-8 text-xs sm:text-sm text-gray-500">
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-[#E87121]"></span>
                 <span>Coimbatore Engineering &amp; Assembly</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
                 <span>On-floor Plant Assessment</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-slate-700"></span>
                 <span>Retrofits for Existing Lines</span>
               </div>
             </div>
@@ -63,7 +63,7 @@ export default function Hero({ onOpenContact }) {
           {/* Right Column: Control Panel Image */}
           <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-xl lg:max-w-none">
-              <div className="overflow-hidden rounded-xl shadow-2xl border border-gray-200 bg-gray-100">
+              <div className="overflow-hidden rounded-2xl shadow-2xl border border-gray-200 bg-gray-100">
                 <img
                   src="/assets/control-panel.jpg"
                   alt="Industrial Electrical Control Panel and PLC System by Crabster Technology"
@@ -73,7 +73,8 @@ export default function Hero({ onOpenContact }) {
                     e.target.src = "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80";
                   }}
                 />
-                <div className="absolute bottom-4 right-4 bg-black/80 backdrop-blur-md text-white px-3.5 py-1.5 rounded text-xs sm:text-sm font-medium tracking-wide">
+                <div className="absolute bottom-4 right-4 bg-black/85 backdrop-blur-md text-white px-3.5 py-1.5 rounded-md text-xs sm:text-sm font-medium tracking-wide flex items-center gap-2 border border-white/10">
+                  <span className="w-2 h-2 rounded-full bg-[#E87121] animate-pulse"></span>
                   Custom PLC &amp; Edge Integration
                 </div>
               </div>

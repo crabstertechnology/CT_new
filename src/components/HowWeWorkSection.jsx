@@ -43,7 +43,7 @@ export default function HowWeWorkSection() {
         
         {/* Section Header */}
         <div className="max-w-4xl mb-12 sm:mb-14">
-          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-700 mb-2.5">
+          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2.5">
             HOW WE WORK
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-950 tracking-tight leading-tight">
@@ -56,9 +56,9 @@ export default function HowWeWorkSection() {
 
         {/* Vertical Connected Timeline spanning full width */}
         <div className="relative pl-3 sm:pl-4 max-w-5xl">
-          {/* Continuous vertical connecting line */}
+          {/* Continuous vertical connecting line in orange */}
           <div 
-            className="absolute left-[22px] sm:left-[27px] top-5 bottom-8 w-[2px] bg-blue-200" 
+            className="absolute left-[22px] sm:left-[27px] top-5 bottom-8 w-[2px] bg-orange-200" 
             aria-hidden="true"
           />
 
@@ -66,14 +66,14 @@ export default function HowWeWorkSection() {
             {steps.map((step, idx) => (
               <div key={idx} className="relative flex items-start gap-5 sm:gap-7 group">
                 
-                {/* Circular Numbered Badge */}
-                <div className="relative z-10 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border-2 border-blue-600 text-blue-700 text-sm sm:text-base font-bold shadow-xs shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-200">
+                {/* Circular Numbered Badge in Crabster Orange */}
+                <div className="relative z-10 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border-2 border-[#E87121] text-[#E87121] text-sm sm:text-base font-bold shadow-xs shrink-0 group-hover:bg-[#E87121] group-hover:text-white transition-colors duration-200">
                   {step.number}
                 </div>
 
                 {/* Content */}
                 <div className="pt-0.5 flex-1">
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-950 mb-1.5 group-hover:text-blue-900 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-950 mb-1.5 group-hover:text-[#E87121] transition-colors">
                     {step.title}
                   </h3>
                   <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl font-normal">

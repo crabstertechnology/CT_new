@@ -25,7 +25,7 @@ export default function EnquirySection() {
           
           {/* Left Column: Heading and Context */}
           <div className="lg:col-span-5 xl:col-span-5">
-            <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-700 mb-2.5">
+            <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2.5">
               START WITH A CONVERSATION
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-950 tracking-tight leading-tight mb-6 max-w-xl">
@@ -39,8 +39,8 @@ export default function EnquirySection() {
           {/* Right Column: Form */}
           <div className="lg:col-span-7 xl:col-span-7 w-full">
             {submitted ? (
-              <div className="bg-slate-50 border border-gray-200 rounded-2xl p-8 sm:p-12 text-center">
-                <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
+              <div className="bg-orange-50/50 border border-orange-200 rounded-2xl p-8 sm:p-12 text-center">
+                <div className="w-16 h-16 rounded-full bg-orange-100 text-[#E87121] flex items-center justify-center mx-auto mb-4">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Enquiry Sent Successfully</h3>
@@ -52,7 +52,7 @@ export default function EnquirySection() {
                     setSubmitted(false);
                     setFormData({ name: '', email: '', phone: '', description: '' });
                   }}
-                  className="px-6 py-2.5 text-sm font-semibold text-[#0E3B64] hover:underline"
+                  className="px-6 py-2.5 text-sm font-bold text-[#E87121] hover:underline"
                 >
                   Send another message
                 </button>
@@ -71,7 +71,7 @@ export default function EnquirySection() {
                       placeholder="Enter your answer"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-md text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-md text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E87121] focus:border-transparent transition-all"
                     />
                   </div>
 
@@ -86,7 +86,7 @@ export default function EnquirySection() {
                       placeholder="you@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-md text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-md text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E87121] focus:border-transparent transition-all"
                     />
                   </div>
                 </div>
@@ -102,7 +102,7 @@ export default function EnquirySection() {
                     placeholder="Enter your answer"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-md text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-md text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E87121] focus:border-transparent transition-all"
                   />
                 </div>
 
@@ -117,7 +117,7 @@ export default function EnquirySection() {
                     placeholder="How can we help?"
                     value={formData.description}
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                    className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-md text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all resize-y"
+                    className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-md text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E87121] focus:border-transparent transition-all resize-y"
                   ></textarea>
                 </div>
 
@@ -125,7 +125,7 @@ export default function EnquirySection() {
                 <div className="pt-2 flex flex-wrap items-center gap-5">
                   <button
                     type="submit"
-                    className="px-8 py-3.5 text-sm sm:text-base font-semibold text-white bg-[#0E3B64] hover:bg-[#092645] active:scale-[0.98] rounded shadow-sm transition-all"
+                    className="px-8 py-3.5 text-sm sm:text-base font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-md shadow-lg shadow-orange-500/25 transition-all"
                   >
                     <span>Send enquiry</span>
                   </button>

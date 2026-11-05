@@ -18,17 +18,22 @@ export default function Navbar({ onOpenContact }) {
       <div className="w-full px-6 sm:px-10 lg:px-14 xl:px-20">
         <div className="flex items-center justify-between h-20 w-full">
           
-          {/* Logo on Left-most corner */}
+          {/* Crabster Logo on Left-most corner */}
           <div className="flex items-center">
-            <a href="#" className="flex items-center group">
-              <span className="logo-script text-3xl sm:text-4xl font-semibold text-gray-900 tracking-wide group-hover:text-blue-900 transition-colors">
-                Logo
+            <a href="#" className="flex items-center gap-3 group">
+              <img
+                src="/assets/crabster-logo.png"
+                alt="Crabster Technology Logo"
+                className="h-10 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+              />
+              <span className="text-base sm:text-lg font-black tracking-wider text-gray-950 uppercase select-none">
+                CRABSTER <span className="text-[#E87121]">TECHNOLOGY</span>
               </span>
             </a>
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-10 text-sm font-medium text-gray-700">
+          <nav className="hidden md:flex items-center space-x-10 text-sm font-semibold text-gray-700">
             {/* Services with Dropdown */}
             <div 
               className="relative"
@@ -37,16 +42,16 @@ export default function Navbar({ onOpenContact }) {
             >
               <button 
                 onClick={() => setServicesDropdown(!servicesDropdown)}
-                className="flex items-center gap-1.5 py-2 hover:text-[#0E3B64] transition-colors focus:outline-none"
+                className="flex items-center gap-1.5 py-2 hover:text-[#E87121] transition-colors focus:outline-none"
               >
                 <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 text-gray-500 ${servicesDropdown ? 'rotate-180 text-[#0E3B64]' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 text-gray-500 ${servicesDropdown ? 'rotate-180 text-[#E87121]' : ''}`} />
               </button>
 
               {/* Dropdown Menu */}
               {servicesDropdown && (
                 <div className="absolute top-full left-0 w-80 bg-white border border-gray-100 rounded-xl shadow-xl py-3 px-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-                  <div className="px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-blue-700">
+                  <div className="px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#E87121]">
                     Our Core Capabilities
                   </div>
                   {services.map((svc, idx) => (
@@ -54,9 +59,9 @@ export default function Navbar({ onOpenContact }) {
                       key={idx}
                       href={svc.href}
                       onClick={() => setServicesDropdown(false)}
-                      className="block px-3 py-2.5 rounded-lg hover:bg-gray-50 transition-colors group"
+                      className="block px-3 py-2.5 rounded-lg hover:bg-orange-50/50 transition-colors group"
                     >
-                      <div className="text-sm font-semibold text-gray-900 group-hover:text-[#0E3B64]">
+                      <div className="text-sm font-bold text-gray-900 group-hover:text-[#E87121] transition-colors">
                         {svc.title}
                       </div>
                       <div className="text-xs text-gray-500 mt-0.5 line-clamp-1">
@@ -68,13 +73,13 @@ export default function Navbar({ onOpenContact }) {
               )}
             </div>
 
-            <a href="#industries" className="hover:text-[#0E3B64] transition-colors">
+            <a href="#industries" className="hover:text-[#E87121] transition-colors">
               Industries
             </a>
-            <a href="#about" className="hover:text-[#0E3B64] transition-colors">
+            <a href="#about" className="hover:text-[#E87121] transition-colors">
               About
             </a>
-            <a href="#contact" className="hover:text-[#0E3B64] transition-colors">
+            <a href="#contact" className="hover:text-[#E87121] transition-colors">
               Contact
             </a>
           </nav>
@@ -83,7 +88,7 @@ export default function Navbar({ onOpenContact }) {
           <div className="hidden md:flex items-center">
             <button
               onClick={onOpenContact}
-              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-[#0E3B64] hover:bg-[#092645] active:scale-[0.98] rounded-md transition-all shadow-sm"
+              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-md transition-all shadow-md shadow-orange-500/20"
             >
               Talk to an engineer
             </button>
@@ -93,7 +98,7 @@ export default function Navbar({ onOpenContact }) {
           <div className="flex md:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none"
+              className="p-2 rounded-lg text-gray-700 hover:text-[#E87121] hover:bg-orange-50 focus:outline-none"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -106,7 +111,7 @@ export default function Navbar({ onOpenContact }) {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-gray-100 bg-white px-6 pt-3 pb-6 shadow-lg animate-in slide-in-from-top duration-200">
           <nav className="flex flex-col space-y-3">
-            <div className="text-xs font-bold uppercase tracking-wider text-blue-600 px-3 pt-2">
+            <div className="text-xs font-bold uppercase tracking-wider text-[#E87121] px-3 pt-2">
               Services
             </div>
             {services.map((svc, idx) => (
@@ -114,7 +119,7 @@ export default function Navbar({ onOpenContact }) {
                 key={idx}
                 href={svc.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 text-sm text-gray-800 hover:bg-gray-50 rounded-lg flex items-center justify-between"
+                className="px-3 py-2 text-sm text-gray-800 hover:bg-orange-50 rounded-lg flex items-center justify-between"
               >
                 <span>{svc.title}</span>
                 <ArrowRight className="w-3.5 h-3.5 text-gray-400" />
@@ -124,21 +129,21 @@ export default function Navbar({ onOpenContact }) {
             <a
               href="#industries"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg"
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-lg"
             >
               Industries
             </a>
             <a
               href="#about"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg"
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-lg"
             >
               About
             </a>
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg"
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-lg"
             >
               Contact
             </a>
@@ -148,7 +153,7 @@ export default function Navbar({ onOpenContact }) {
                   setMobileMenuOpen(false);
                   onOpenContact();
                 }}
-                className="w-full py-2.5 text-center text-sm font-semibold text-white bg-[#0E3B64] hover:bg-[#092645] rounded-md shadow-sm"
+                className="w-full py-2.5 text-center text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] rounded-md shadow-md"
               >
                 Talk to an engineer
               </button>

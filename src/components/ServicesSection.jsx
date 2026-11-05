@@ -84,7 +84,7 @@ export default function ServicesSection({ onOpenContact }) {
         
         {/* Section Heading */}
         <div className="max-w-4xl mb-12 sm:mb-14">
-          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-700 mb-2.5">
+          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2.5">
             WHAT WE DO
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-950 tracking-tight leading-tight">
@@ -102,16 +102,16 @@ export default function ServicesSection({ onOpenContact }) {
             return (
               <div
                 key={svc.id}
-                className="bg-white hover:bg-slate-50/90 border border-gray-200 rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-xs transition-all duration-200 group"
+                className="bg-white hover:bg-orange-50/20 border border-gray-200 hover:border-orange-200 rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-xs transition-all duration-200 group"
               >
                 <div>
                   {/* Icon Box */}
-                  <div className="w-12 h-12 rounded-xl border border-gray-200 bg-gray-50 flex items-center justify-center text-blue-700 shadow-xs mb-6 group-hover:border-blue-300 transition-colors">
-                    <Icon className="w-6 h-6 stroke-[1.8]" />
+                  <div className="w-12 h-12 rounded-xl border border-orange-200/80 bg-orange-50/80 flex items-center justify-center text-[#E87121] shadow-xs mb-6 group-hover:scale-105 transition-transform">
+                    <Icon className="w-6 h-6 stroke-[2]" />
                   </div>
 
                   {/* Card Title */}
-                  <h3 className="text-2xl sm:text-[1.65rem] font-bold text-gray-950 mb-3 tracking-tight group-hover:text-blue-900 transition-colors">
+                  <h3 className="text-2xl sm:text-[1.65rem] font-bold text-gray-950 mb-3 tracking-tight group-hover:text-[#E87121] transition-colors">
                     {svc.title}
                   </h3>
 
@@ -125,7 +125,7 @@ export default function ServicesSection({ onOpenContact }) {
                 <div className="pt-3 border-t border-gray-100">
                   <button
                     onClick={() => setSelectedService(svc)}
-                    className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-blue-800 hover:text-blue-950 group/link focus:outline-none"
+                    className="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-[#E87121] hover:text-[#D45E12] group/link focus:outline-none"
                   >
                     <span>{svc.linkText}</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
@@ -150,7 +150,7 @@ export default function ServicesSection({ onOpenContact }) {
             </button>
 
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center border border-blue-100">
+              <div className="w-10 h-10 rounded-lg bg-orange-50 text-[#E87121] flex items-center justify-center border border-orange-200">
                 <selectedService.icon className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-bold text-gray-900">
@@ -163,7 +163,7 @@ export default function ServicesSection({ onOpenContact }) {
             </p>
 
             <div className="bg-slate-50 rounded-xl p-4 border border-gray-200/80 mb-6">
-              <div className="text-xs font-bold uppercase tracking-wider text-blue-800 mb-3">
+              <div className="text-xs font-bold uppercase tracking-wider text-[#E87121] mb-3">
                 Key Deliverables &amp; Engineering Scope
               </div>
               <ul className="space-y-2.5">
@@ -188,7 +188,7 @@ export default function ServicesSection({ onOpenContact }) {
                   setSelectedService(null);
                   onOpenContact();
                 }}
-                className="px-5 py-2.5 text-sm font-semibold text-white bg-[#0E3B64] hover:bg-[#092645] rounded-md shadow-sm"
+                className="px-6 py-2.5 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] rounded-md shadow-md shadow-orange-500/20"
               >
                 Discuss this requirement
               </button>

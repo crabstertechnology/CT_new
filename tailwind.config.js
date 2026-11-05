@@ -8,10 +8,11 @@ export default {
     extend: {
       colors: {
         brand: {
-          blue: '#1A67B2',
-          navy: '#0E3B64',
-          darkNavy: '#0A121A',
-          deepDark: '#081018',
+          orange: '#E87121',
+          orangeHover: '#D45E12',
+          orangeLight: '#FFF7ED',
+          orangeBorder: '#FDBA74',
+          dark: '#09111E',
           cardBg: '#F3F4F6',
           borderSubtle: '#E5E7EB',
           textMuted: '#4B5563',

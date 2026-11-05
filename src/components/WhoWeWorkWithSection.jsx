@@ -37,7 +37,7 @@ export default function WhoWeWorkWithSection() {
         
         {/* Section Header */}
         <div className="max-w-4xl mb-14 sm:mb-16">
-          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-700 mb-2.5">
+          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2.5">
             WHO WE WORK WITH
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-950 tracking-tight leading-tight">
@@ -53,9 +53,9 @@ export default function WhoWeWorkWithSection() {
           {industries.map((ind, index) => (
             <div 
               key={index} 
-              className="p-6 -mx-6 rounded-2xl hover:bg-slate-50 transition-colors duration-200 group"
+              className="p-6 -mx-6 rounded-2xl hover:bg-orange-50/40 transition-colors duration-200 group"
             >
-              <h3 className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold text-gray-950 group-hover:text-blue-900 transition-colors mb-2.5">
+              <h3 className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold text-gray-950 group-hover:text-[#E87121] transition-colors mb-2.5">
                 {ind.title}
               </h3>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">

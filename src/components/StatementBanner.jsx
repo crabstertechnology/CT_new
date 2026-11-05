@@ -11,13 +11,13 @@ export default function StatementBanner() {
       id="mission" 
       className="page-section min-h-screen flex flex-col justify-center bg-[#09111E] text-white relative px-6 sm:px-10 lg:px-14 xl:px-20 py-20 overflow-hidden w-full"
     >
-      {/* Background radial gradient */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[500px] bg-blue-700/10 blur-[140px] pointer-events-none"></div>
+      {/* Background radial gradient with Crabster Orange tint */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[500px] bg-[#E87121]/15 blur-[150px] pointer-events-none"></div>
 
       <div className="w-full flex items-center justify-center">
         <div className="max-w-5xl mx-auto text-center relative z-10 py-6">
           
-          <div className="inline-block text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-400 mb-6 px-4 py-1.5 rounded-full bg-blue-950/60 border border-blue-800/40">
+          <div className="inline-block text-xs sm:text-sm font-bold uppercase tracking-widest text-[#E87121] mb-6 px-4 py-1.5 rounded-full bg-orange-950/40 border border-orange-700/40">
             OUR PHILOSOPHY
           </div>
 
@@ -35,10 +35,10 @@ export default function StatementBanner() {
           <div className="mt-10">
             <button
               onClick={scrollToNext}
-              className="inline-flex items-center gap-2 text-base sm:text-lg font-medium text-slate-200 hover:text-white underline underline-offset-8 decoration-blue-500 hover:decoration-white transition-all group"
+              className="inline-flex items-center gap-2 text-base sm:text-lg font-semibold text-slate-200 hover:text-white underline underline-offset-8 decoration-[#E87121] hover:decoration-white transition-all group"
             >
               <span>How we work</span>
-              <ArrowRight className="w-5 h-5 text-blue-400 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-5 h-5 text-[#E87121] transition-transform group-hover:translate-x-1" />
             </button>
           </div>
 

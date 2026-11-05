@@ -42,7 +42,7 @@ export default function ProblemsSection() {
         
         {/* Section Header */}
         <div className="max-w-4xl mb-14 sm:mb-16">
-          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-700 mb-3">
+          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-3">
             WHERE IT USUALLY GOES WRONG
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-950 tracking-tight leading-tight">
@@ -60,14 +60,14 @@ export default function ProblemsSection() {
             return (
               <div 
                 key={index} 
-                className="group p-6 sm:p-8 -mx-6 sm:-mx-8 rounded-2xl hover:bg-slate-50 transition-colors duration-200"
+                className="group p-6 sm:p-8 -mx-6 sm:-mx-8 rounded-2xl hover:bg-orange-50/40 transition-colors duration-200"
               >
                 <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 rounded-xl bg-red-50 text-red-600 flex items-center justify-center shrink-0 border border-red-100">
+                  <div className="w-12 h-12 rounded-xl bg-orange-50 text-[#E87121] flex items-center justify-center shrink-0 border border-orange-200/80 group-hover:bg-[#E87121] group-hover:text-white transition-colors duration-200">
                     <Icon className="w-6 h-6 stroke-[2]" />
                   </div>
                   <div>
-                    <h3 className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold text-gray-950 group-hover:text-blue-900 transition-colors leading-snug mb-3">
+                    <h3 className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold text-gray-950 group-hover:text-[#E87121] transition-colors leading-snug mb-3">
                       {item.title}
                     </h3>
                     <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
