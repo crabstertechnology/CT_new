@@ -31,7 +31,7 @@ export default function ProblemsSection() {
   return (
     <section 
       id="problems" 
-      className="page-section min-h-screen flex flex-col justify-center bg-white border-b border-gray-100 relative w-full overflow-hidden"
+      className="flex flex-col justify-center bg-white border-b border-gray-100 relative w-full overflow-hidden"
     >
       <div className="flex flex-col w-full px-6 sm:px-10 lg:px-14 xl:px-20 py-14 lg:py-16">
 

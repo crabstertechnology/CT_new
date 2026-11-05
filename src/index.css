@@ -14,16 +14,7 @@
     border-radius: 0px !important;
   }
 
-  @media (min-width: 1024px) {
-    html {
-      scroll-snap-type: y mandatory;
-    }
-
-    .page-section {
-      scroll-snap-align: start;
-      scroll-snap-stop: always;
-    }
-  }
+  /* Smooth natural scroll — no snap forcing empty space */
 }
 
 .logo-script {

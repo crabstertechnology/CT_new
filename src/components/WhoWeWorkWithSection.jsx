@@ -31,7 +31,7 @@ export default function WhoWeWorkWithSection() {
   return (
     <section 
       id="industries" 
-      className="page-section min-h-screen flex flex-col justify-center bg-white border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-20 w-full"
+      className="flex flex-col justify-center bg-white border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-20 w-full"
     >
       <div className="w-full flex flex-col justify-center">
         

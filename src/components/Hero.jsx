@@ -4,7 +4,7 @@ export default function Hero({ onOpenContact }) {
   return (
     <section 
       id="hero" 
-      className="page-section min-h-screen pt-20 pb-10 flex flex-col justify-center bg-white relative overflow-hidden w-full"
+      className="pt-24 pb-16 flex flex-col justify-center bg-white relative overflow-hidden w-full"
     >
       <div className="w-full px-6 sm:px-10 lg:px-14 xl:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center w-full">

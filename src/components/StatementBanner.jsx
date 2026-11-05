@@ -9,7 +9,7 @@ export default function StatementBanner() {
   return (
     <section 
       id="mission" 
-      className="page-section min-h-screen flex flex-col justify-center bg-[#09111E] text-white relative px-6 sm:px-10 lg:px-14 xl:px-20 py-20 overflow-hidden w-full"
+      className="flex flex-col justify-center bg-[#09111E] text-white relative px-6 sm:px-10 lg:px-14 xl:px-20 py-24 overflow-hidden w-full"
     >
       {/* Background radial gradient with Crabster Orange tint */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[500px] bg-[#E87121]/15 blur-[150px] pointer-events-none"></div>
