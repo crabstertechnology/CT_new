@@ -40,19 +40,19 @@ export default function ServicesSection({ onSelectService }) {
   return (
     <section 
       id="services" 
-      className="flex flex-col justify-center bg-slate-50/70 border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-20 w-full"
+      className="flex flex-col justify-center bg-slate-50/70 border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-10 sm:py-12 w-full"
     >
       <div className="w-full flex flex-col justify-center">
         
         {/* Section Heading */}
-        <div className="max-w-4xl mb-12 sm:mb-14">
-          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2.5">
+        <div className="max-w-4xl mb-6 sm:mb-8">
+          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2">
             WHAT WE DO
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-950 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-gray-950 tracking-tight leading-tight">
             Four ways we modernise a plant
           </h2>
-          <p className="mt-3.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl">
+          <p className="mt-2.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl text-justify">
             Start with the one that matches your problem. Most projects end up combining two — sensors on the machines, and a panel or controller that acts on what they report.
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function ServicesSection({ onSelectService }) {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 font-normal">
+                  <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 font-normal text-justify">
                     {svc.description}
                   </p>
                 </div>

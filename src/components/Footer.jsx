@@ -8,7 +8,7 @@ export default function Footer({ onOpenContact }) {
 
   return (
     <footer id="site-footer" className="bg-[#0B1017] text-gray-400 font-sans border-t border-gray-800 w-full">
-      <div className="w-full px-6 sm:px-10 lg:px-14 xl:px-20 pt-16 pb-12">
+      <div className="w-full px-6 sm:px-10 lg:px-14 xl:px-20 pt-10 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 w-full">
           
           {/* Left Column: Brand & Regional Coverage on Far Left Corner */}

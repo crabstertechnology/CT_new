@@ -20,10 +20,10 @@ export default function ModernizeSection({ onOpenContact }) {
   return (
     <section 
       id="modernize" 
-      className="flex flex-col justify-center bg-white border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-20 w-full"
+      className="flex flex-col justify-center bg-white border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-10 sm:py-12 w-full"
     >
       <div className="w-full flex items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center w-full">
           
           {/* Left Column: 4K Crisp Machine Photo (No overlay badge) */}
           <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-start">
@@ -65,12 +65,12 @@ export default function ModernizeSection({ onOpenContact }) {
             </div>
 
             {/* Main Heading */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-950 tracking-tight leading-tight mb-6 max-w-3xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-gray-950 tracking-tight leading-tight mb-4 max-w-3xl">
               Modernise the machine you already own
             </h2>
 
             {/* Description */}
-            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-normal mb-8 max-w-2xl">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-normal mb-6 max-w-2xl text-justify">
               A fifteen-year-old line does not need replacing to behave like a newer one. We add the sensing, control and monitoring it was built without — no new machine, and no months of production lost to a rebuild.
             </p>
 

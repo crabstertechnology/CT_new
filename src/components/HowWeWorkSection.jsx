@@ -37,54 +37,61 @@ export default function HowWeWorkSection() {
   return (
     <section 
       id="how-we-work" 
-      className="flex flex-col justify-center bg-slate-50/70 border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-20 w-full"
+      className="flex flex-col justify-center bg-slate-50/70 border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-10 sm:py-12 w-full"
     >
       <div className="w-full flex flex-col justify-center">
         
         {/* Section Header */}
-        <div className="max-w-4xl mb-12 sm:mb-14">
-          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2.5">
+        <div className="max-w-4xl mb-6 sm:mb-8">
+          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2">
             HOW WE WORK
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-950 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-gray-950 tracking-tight leading-tight">
             From the first walk round the plant to a running system
           </h2>
-          <p className="mt-3.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl font-normal">
+          <p className="mt-2.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl font-normal text-justify">
             Each stage ends with something you can check before the next one starts: a written scope, a panel design, a tested system.
           </p>
         </div>
 
-        {/* Vertical Connected Timeline spanning full width */}
-        <div className="relative pl-3 sm:pl-4 max-w-5xl">
-          {/* Continuous vertical connecting line in orange */}
-          <div 
-            className="absolute left-[22px] sm:left-[27px] top-5 bottom-8 w-[2px] bg-orange-200" 
-            aria-hidden="true"
-          />
+        {/* Vertical Connected Timeline — 100% Mathematically Straight Alignment */}
+        <div className="max-w-5xl">
+          <div className="flex flex-col">
+            {steps.map((step, idx) => {
+              const isLast = idx === steps.length - 1;
+              return (
+                <div key={idx} className="flex items-start gap-5 sm:gap-7 group">
+                  
+                  {/* Timeline Column: Circle + Exactly Centered Vertical Line */}
+                  <div className="flex flex-col items-center shrink-0 self-stretch">
+                    {/* Circular Numbered Badge in Crabster Orange */}
+                    <div className="relative z-10 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border-2 border-[#E87121] text-[#E87121] text-sm sm:text-base font-bold shadow-xs group-hover:bg-[#E87121] group-hover:text-white transition-colors duration-200">
+                      {step.number}
+                    </div>
 
-          <div className="space-y-7 sm:space-y-8">
-            {steps.map((step, idx) => (
-              <div key={idx} className="relative flex items-start gap-5 sm:gap-7 group">
-                
-                {/* Circular Numbered Badge in Crabster Orange */}
-                <div className="relative z-10 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border-2 border-[#E87121] text-[#E87121] text-sm sm:text-base font-bold shadow-xs shrink-0 group-hover:bg-[#E87121] group-hover:text-white transition-colors duration-200">
-                  {step.number}
+                    {/* Perfectly Centered Straight Vertical Line */}
+                    {!isLast && (
+                      <div 
+                        className="w-[2px] bg-orange-200 flex-1 my-1" 
+                        aria-hidden="true"
+                      />
+                    )}
+                  </div>
+
+                  {/* Content */}
+                  <div className={`pt-1.5 flex-1 ${!isLast ? 'pb-6 sm:pb-7' : 'pb-0'}`}>
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-950 mb-1 group-hover:text-[#E87121] transition-colors">
+                      {step.title}
+                    </h3>
+                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl font-normal text-justify">
+                      {step.description}
+                    </p>
+                  </div>
+
                 </div>
-
-                {/* Content */}
-                <div className="pt-0.5 flex-1">
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-950 mb-1.5 group-hover:text-[#E87121] transition-colors">
-                    {step.title}
-                  </h3>
-                  <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl font-normal">
-                    {step.description}
-                  </p>
-                </div>
-
-              </div>
-            ))}
+              );
+            })}
           </div>
-
         </div>
 
       </div>

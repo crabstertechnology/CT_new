@@ -18,20 +18,20 @@ export default function EnquirySection() {
   return (
     <section 
       id="contact" 
-      className="flex flex-col justify-center bg-white border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-20 w-full"
+      className="flex flex-col justify-center bg-white border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-10 sm:py-12 w-full"
     >
       <div className="w-full flex items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center w-full">
           
           {/* Left Column: Heading and Context */}
           <div className="lg:col-span-5 xl:col-span-5">
-            <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2.5">
+            <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2">
               START WITH A CONVERSATION
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-950 tracking-tight leading-tight mb-6 max-w-xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-gray-950 tracking-tight leading-tight mb-4 max-w-xl">
               Tell us what the plant is doing now
             </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-normal max-w-xl">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-normal max-w-xl text-justify">
               Describe the machine, line or process that is not behaving the way you want. We will come back with questions — and if it looks like a fit, arrange a visit to see it running.
             </p>
           </div>

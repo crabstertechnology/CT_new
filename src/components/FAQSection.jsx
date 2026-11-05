@@ -44,19 +44,19 @@ export default function FAQSection() {
   return (
     <section 
       id="faq" 
-      className="flex flex-col justify-center bg-slate-50/70 border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-20 w-full"
+      className="flex flex-col justify-center bg-slate-50/70 border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-10 sm:py-12 w-full"
     >
       <div className="w-full flex flex-col justify-center">
         
         {/* Section Header */}
-        <div className="max-w-4xl mb-12 sm:mb-14">
-          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2.5">
+        <div className="max-w-4xl mb-6 sm:mb-8">
+          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2">
             COMMON QUESTIONS
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-950 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-gray-950 tracking-tight leading-tight">
             What owners ask us before the first visit
           </h2>
-          <p className="mt-3.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl font-normal">
+          <p className="mt-2.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl font-normal text-justify">
             Straight answers to what comes up on almost every first call.
           </p>
         </div>
@@ -85,8 +85,8 @@ export default function FAQSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="mt-4 pr-8 animate-in fade-in duration-200 max-w-4xl">
-                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
+                  <div className="mt-3 pr-8 animate-in fade-in duration-200 max-w-4xl">
+                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal text-justify">
                       {faq.answer}
                     </p>
                   </div>
