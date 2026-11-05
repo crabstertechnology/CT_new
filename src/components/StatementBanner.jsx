@@ -17,8 +17,8 @@ export default function StatementBanner() {
       <div className="w-full flex items-center justify-center">
         <div className="max-w-5xl mx-auto text-center relative z-10 py-6">
           
-          {/* OUR PHILOSOPHY Badge in Crisp White */}
-          <div className="inline-block text-xs sm:text-sm font-bold uppercase tracking-widest text-white mb-6 px-4 py-1.5 rounded-full bg-white/10 border border-white/20">
+          {/* OUR PHILOSOPHY Badge in Crisp White with Sharp Corners */}
+          <div className="inline-block text-xs sm:text-sm font-bold uppercase tracking-widest text-white mb-6 px-4 py-1.5 rounded-none bg-white/10 border border-white/20">
             OUR PHILOSOPHY
           </div>
 
@@ -36,7 +36,7 @@ export default function StatementBanner() {
           <div className="mt-10">
             <button
               onClick={scrollToNext}
-              className="inline-flex items-center gap-2 text-base sm:text-lg font-semibold text-slate-200 hover:text-white underline underline-offset-8 decoration-[#E87121] hover:decoration-white transition-all group"
+              className="inline-flex items-center gap-2 text-base sm:text-lg font-semibold text-slate-200 hover:text-white underline underline-offset-8 decoration-[#E87121] hover:decoration-white transition-all group rounded-none cursor-pointer"
             >
               <span>How we work</span>
               <ArrowRight className="w-5 h-5 text-[#E87121] transition-transform group-hover:translate-x-1" />

@@ -64,11 +64,11 @@ export default function ServicesSection({ onSelectService }) {
             return (
               <div
                 key={svc.id}
-                className="bg-white hover:bg-orange-50/20 border border-gray-200 hover:border-orange-200 rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-xs transition-all duration-200 group"
+                className="bg-white hover:bg-orange-50/20 border border-gray-200 hover:border-orange-200 rounded-none p-8 sm:p-10 flex flex-col justify-between shadow-xs transition-all duration-200 group"
               >
                 <div>
                   {/* Icon Box */}
-                  <div className="w-12 h-12 rounded-xl border border-orange-200/80 bg-orange-50/80 flex items-center justify-center text-[#E87121] shadow-xs mb-6 group-hover:scale-105 transition-transform">
+                  <div className="w-12 h-12 rounded-none border border-orange-200/80 bg-orange-50/80 flex items-center justify-center text-[#E87121] shadow-xs mb-6 group-hover:scale-105 transition-transform">
                     <Icon className="w-6 h-6 stroke-[2]" />
                   </div>
 

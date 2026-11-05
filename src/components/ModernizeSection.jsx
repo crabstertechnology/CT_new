@@ -28,7 +28,7 @@ export default function ModernizeSection({ onOpenContact }) {
           {/* Left Column: 4K Crisp Machine Photo (No overlay badge) */}
           <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-start">
             <div className="relative w-full max-w-xl lg:max-w-none">
-              <div className="overflow-hidden rounded-2xl shadow-xl border border-gray-200 bg-gray-100">
+              <div className="overflow-hidden rounded-none shadow-xl border border-gray-200 bg-gray-100">
                 <img
                   src="/assets/factory-machine-hd.jpg"
                   alt="Industrial Machinery Retrofit with Digital Operator Terminal"
@@ -65,7 +65,7 @@ export default function ModernizeSection({ onOpenContact }) {
                 const Icon = pt.icon;
                 return (
                   <div key={idx} className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-lg bg-orange-50 text-[#E87121] flex items-center justify-center shrink-0 mt-0.5 border border-orange-200">
+                    <div className="w-8 h-8 rounded-none bg-orange-50 text-[#E87121] flex items-center justify-center shrink-0 mt-0.5 border border-orange-200">
                       <Icon className="w-4 h-4 stroke-[2]" />
                     </div>
                     <p className="text-base sm:text-lg text-gray-800 font-medium leading-relaxed">
@@ -80,7 +80,7 @@ export default function ModernizeSection({ onOpenContact }) {
             <div>
               <button
                 onClick={onOpenContact}
-                className="inline-flex items-center gap-2 px-7 py-3.5 text-sm sm:text-base font-semibold text-gray-900 bg-white border border-gray-300 hover:border-[#E87121] hover:text-[#E87121] hover:bg-orange-50/40 active:scale-[0.98] rounded-md transition-all duration-150"
+                className="inline-flex items-center gap-2 px-7 py-3.5 text-sm sm:text-base font-semibold text-gray-900 bg-white border border-gray-300 hover:border-[#E87121] hover:text-[#E87121] hover:bg-orange-50/40 active:scale-[0.98] rounded-none transition-all duration-150"
               >
                 <span>How production automation works</span>
                 <ArrowRight className="w-4 h-4 text-[#E87121]" />

@@ -145,7 +145,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
         <div className="flex items-center justify-between w-full">
           <button
             onClick={onBack}
-            className="inline-flex items-center gap-2 text-sm font-bold text-gray-700 hover:text-[#E87121] transition-colors py-1.5 px-3 rounded-lg hover:bg-orange-50/50 group"
+            className="inline-flex items-center gap-2 text-sm font-bold text-gray-700 hover:text-[#E87121] transition-colors py-1.5 px-3 rounded-none hover:bg-orange-50/50 group"
           >
             <ArrowLeft className="w-4 h-4 text-[#E87121] transition-transform group-hover:-translate-x-1" />
             <span>Back to Overview</span>
@@ -195,10 +195,10 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
             {service.deliverables.map((item, idx) => (
               <div 
                 key={idx}
-                className="bg-white border border-gray-200/90 rounded-2xl p-8 hover:border-orange-300 hover:bg-orange-50/20 transition-all shadow-xs"
+                className="bg-white border border-gray-200/90 rounded-none p-8 hover:border-orange-300 hover:bg-orange-50/20 transition-all shadow-xs"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-lg bg-orange-50 text-[#E87121] flex items-center justify-center shrink-0 border border-orange-200 mt-1">
+                  <div className="w-8 h-8 rounded-none bg-orange-50 text-[#E87121] flex items-center justify-center shrink-0 border border-orange-200 mt-1">
                     <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
                   </div>
                   <div>
@@ -215,7 +215,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
           </div>
 
           {/* Industry Applications in Tamil Nadu */}
-          <div className="mt-14 p-8 rounded-2xl bg-slate-900 text-white flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="mt-14 p-8 rounded-none bg-slate-900 text-white flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
               <div className="text-xs font-bold uppercase tracking-wider text-[#E87121] mb-1">
                 Typical Applications in Tamil Nadu
@@ -238,7 +238,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
 
       {/* Direct On-Page Enquiry & Consultation Form (No Popup!) */}
       <section className="py-20 px-6 sm:px-10 lg:px-14 xl:px-20 bg-slate-50/70 border-b border-gray-100">
-        <div className="max-w-4xl mx-auto bg-white border border-gray-200 rounded-3xl p-8 sm:p-12 shadow-sm">
+        <div className="max-w-4xl mx-auto bg-white border border-gray-200 rounded-none p-8 sm:p-12 shadow-sm">
           <div className="text-center max-w-xl mx-auto mb-10">
             <div className="text-xs font-bold uppercase tracking-wider text-[#E87121] mb-2">
               DISCUSS THIS SOLUTION
@@ -283,7 +283,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                     placeholder="e.g. Ramesh Kumar"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-md focus:ring-2 focus:ring-[#E87121] outline-none"
+                    className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:ring-2 focus:ring-[#E87121] outline-none"
                   />
                 </div>
                 <div>
@@ -296,7 +296,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                     placeholder="+91 98765 43210"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-md focus:ring-2 focus:ring-[#E87121] outline-none"
+                    className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:ring-2 focus:ring-[#E87121] outline-none"
                   />
                 </div>
               </div>
@@ -311,7 +311,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                   placeholder="e.g. Apex Engineering Works"
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                  className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-md focus:ring-2 focus:ring-[#E87121] outline-none"
+                  className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:ring-2 focus:ring-[#E87121] outline-none"
                 />
               </div>
 
@@ -324,7 +324,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                   placeholder="Describe your current setup, machine make, or what you want to achieve..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-md focus:ring-2 focus:ring-[#E87121] outline-none resize-none"
+                  className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:ring-2 focus:ring-[#E87121] outline-none resize-none"
                 ></textarea>
               </div>
 
@@ -336,7 +336,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
 
                 <button
                   type="submit"
-                  className="px-8 py-3 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-md shadow-md shadow-orange-500/25 transition-all inline-flex items-center gap-2"
+                  className="px-8 py-3 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-md shadow-orange-500/25 transition-all inline-flex items-center gap-2"
                 >
                   <Send className="w-4 h-4" />
                   <span>Submit Requirement</span>
@@ -358,7 +358,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
               <button
                 key={s.id}
                 onClick={() => onNavigateService(s.id)}
-                className={`p-4 rounded-xl border text-left transition-all ${
+                className={`p-4 rounded-none border text-left transition-all ${
                   s.id === service.id
                     ? 'border-[#E87121] bg-orange-50/40 text-gray-950 font-bold'
                     : 'border-gray-200 hover:border-gray-300 text-gray-600 hover:text-gray-950 font-medium'

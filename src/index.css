@@ -7,6 +7,11 @@
     scroll-behavior: smooth;
   }
 
+  /* Sharp corners everywhere per design requirement */
+  button, input, textarea, select {
+    border-radius: 0px !important;
+  }
+
   @media (min-width: 1024px) {
     html {
       scroll-snap-type: y mandatory;
@@ -23,7 +28,7 @@
   font-family: 'Caveat', cursive, sans-serif;
 }
 
-/* Custom sleek scrollbar */
+/* Custom sharp sleek scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -32,7 +37,7 @@
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;

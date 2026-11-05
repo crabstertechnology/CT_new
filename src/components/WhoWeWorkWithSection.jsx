@@ -53,7 +53,7 @@ export default function WhoWeWorkWithSection() {
           {industries.map((ind, index) => (
             <div 
               key={index} 
-              className="p-6 -mx-6 rounded-2xl hover:bg-orange-50/40 transition-colors duration-200 group"
+              className="p-6 -mx-6 rounded-none hover:bg-orange-50/40 transition-colors duration-200 group"
             >
               <h3 className="text-xl sm:text-2xl lg:text-[1.65rem] font-bold text-gray-950 group-hover:text-[#E87121] transition-colors mb-2.5">
                 {ind.title}

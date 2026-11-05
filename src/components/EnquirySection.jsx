@@ -39,7 +39,7 @@ export default function EnquirySection() {
           {/* Right Column: Form */}
           <div className="lg:col-span-7 xl:col-span-7 w-full">
             {submitted ? (
-              <div className="bg-orange-50/50 border border-orange-200 rounded-2xl p-8 sm:p-12 text-center">
+              <div className="bg-orange-50/50 border border-orange-200 rounded-none p-8 sm:p-12 text-center">
                 <div className="w-16 h-16 rounded-full bg-orange-100 text-[#E87121] flex items-center justify-center mx-auto mb-4">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
@@ -71,7 +71,7 @@ export default function EnquirySection() {
                       placeholder="Enter your answer"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-md text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E87121] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-none text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E87121] focus:border-transparent transition-all"
                     />
                   </div>
 
@@ -86,7 +86,7 @@ export default function EnquirySection() {
                       placeholder="you@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-md text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E87121] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-none text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E87121] focus:border-transparent transition-all"
                     />
                   </div>
                 </div>
@@ -102,7 +102,7 @@ export default function EnquirySection() {
                     placeholder="Enter your answer"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-md text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E87121] focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-none text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E87121] focus:border-transparent transition-all"
                   />
                 </div>
 
@@ -117,7 +117,7 @@ export default function EnquirySection() {
                     placeholder="How can we help?"
                     value={formData.description}
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                    className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-md text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E87121] focus:border-transparent transition-all resize-y"
+                    className="w-full px-4 py-3 text-sm sm:text-base bg-white border border-gray-300 rounded-none text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E87121] focus:border-transparent transition-all resize-y"
                   ></textarea>
                 </div>
 
@@ -125,7 +125,7 @@ export default function EnquirySection() {
                 <div className="pt-2 flex flex-wrap items-center gap-5">
                   <button
                     type="submit"
-                    className="px-8 py-3.5 text-sm sm:text-base font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-md shadow-lg shadow-orange-500/25 transition-all"
+                    className="px-8 py-3.5 text-sm sm:text-base font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-lg shadow-orange-500/25 transition-all"
                   >
                     <span>Send enquiry</span>
                   </button>

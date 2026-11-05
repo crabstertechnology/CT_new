@@ -28,11 +28,19 @@ export default function Navbar({ onSelectService, onGoToContact }) {
           
           {/* Crabster Logo on Left-most corner */}
           <div className="flex items-center">
-            <a href="#" onClick={(e) => { e.preventDefault(); window.location.hash = ''; window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center gap-3 group">
+            <a 
+              href="#" 
+              onClick={(e) => { 
+                e.preventDefault(); 
+                window.location.hash = ''; 
+                window.scrollTo({ top: 0, behavior: 'smooth' }); 
+              }} 
+              className="flex items-center gap-3 group"
+            >
               <img
                 src="/assets/crabster-logo.png"
                 alt="Crabster Technology Logo"
-                className="h-10 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                className="h-10 sm:h-11 w-auto object-contain transition-transform duration-150 group-hover:scale-105"
               />
               <span className="text-base sm:text-lg font-black tracking-wider text-gray-950 uppercase select-none">
                 CRABSTER <span className="text-[#E87121]">TECHNOLOGY</span>
@@ -50,15 +58,15 @@ export default function Navbar({ onSelectService, onGoToContact }) {
             >
               <button 
                 onClick={() => setServicesDropdown(!servicesDropdown)}
-                className="flex items-center gap-1.5 py-2 hover:text-[#E87121] transition-colors focus:outline-none"
+                className="flex items-center gap-1.5 py-2 hover:text-[#E87121] transition-colors focus:outline-none rounded-none"
               >
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 text-gray-500 ${servicesDropdown ? 'rotate-180 text-[#E87121]' : ''}`} />
               </button>
 
-              {/* Dropdown Menu */}
+              {/* Sharp Dropdown Menu */}
               {servicesDropdown && (
-                <div className="absolute top-full left-0 w-80 bg-white border border-gray-100 rounded-xl shadow-xl py-3 px-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute top-full left-0 w-80 bg-white border border-gray-200 rounded-none shadow-xl py-3 px-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
                   <div className="px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#E87121]">
                     Our Core Capabilities
                   </div>
@@ -66,7 +74,7 @@ export default function Navbar({ onSelectService, onGoToContact }) {
                     <button
                       key={svc.id}
                       onClick={() => handleServiceClick(svc.id)}
-                      className="w-full text-left block px-3 py-2.5 rounded-lg hover:bg-orange-50/50 transition-colors group cursor-pointer"
+                      className="w-full text-left block px-3 py-2.5 rounded-none hover:bg-orange-50/50 transition-colors group cursor-pointer"
                     >
                       <div className="text-sm font-bold text-gray-900 group-hover:text-[#E87121] transition-colors">
                         {svc.title}
@@ -100,21 +108,21 @@ export default function Navbar({ onSelectService, onGoToContact }) {
             </a>
           </nav>
 
-          {/* Right Action Button on Right-most corner (Navigates directly, no popup!) */}
+          {/* Right Action Button on Right-most corner - Sharp Edges */}
           <div className="hidden md:flex items-center">
             <button
               onClick={onGoToContact}
-              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-md transition-all shadow-md shadow-orange-500/20 cursor-pointer"
+              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none transition-all shadow-md shadow-orange-500/20 cursor-pointer"
             >
               Talk to an engineer
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Sharp */}
           <div className="flex md:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-gray-700 hover:text-[#E87121] hover:bg-orange-50 focus:outline-none"
+              className="p-2 rounded-none text-gray-700 hover:text-[#E87121] hover:bg-orange-50 focus:outline-none"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -123,7 +131,7 @@ export default function Navbar({ onSelectService, onGoToContact }) {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu - Sharp */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-gray-100 bg-white px-6 pt-3 pb-6 shadow-lg animate-in slide-in-from-top duration-200">
           <nav className="flex flex-col space-y-3">
@@ -134,7 +142,7 @@ export default function Navbar({ onSelectService, onGoToContact }) {
               <button
                 key={svc.id}
                 onClick={() => handleServiceClick(svc.id)}
-                className="w-full text-left px-3 py-2 text-sm text-gray-800 hover:bg-orange-50 rounded-lg flex items-center justify-between"
+                className="w-full text-left px-3 py-2 text-sm text-gray-800 hover:bg-orange-50 rounded-none flex items-center justify-between"
               >
                 <span>{svc.title}</span>
                 <ArrowRight className="w-3.5 h-3.5 text-gray-400" />
@@ -144,14 +152,14 @@ export default function Navbar({ onSelectService, onGoToContact }) {
             <a
               href="#industries"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-lg"
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-none"
             >
               Industries
             </a>
             <a
               href="#about"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-lg"
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-none"
             >
               About
             </a>
@@ -161,7 +169,7 @@ export default function Navbar({ onSelectService, onGoToContact }) {
                 setMobileMenuOpen(false);
                 if (onGoToContact) onGoToContact();
               }}
-              className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-lg"
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-none"
             >
               Contact
             </a>
@@ -171,7 +179,7 @@ export default function Navbar({ onSelectService, onGoToContact }) {
                   setMobileMenuOpen(false);
                   if (onGoToContact) onGoToContact();
                 }}
-                className="w-full py-2.5 text-center text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] rounded-md shadow-md"
+                className="w-full py-2.5 text-center text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] rounded-none shadow-md"
               >
                 Talk to an engineer
               </button>
