@@ -195,20 +195,16 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
             {service.deliverables.map((item, idx) => (
               <div 
                 key={idx}
-                className="bg-white border border-gray-200/90 rounded-none p-8 hover:border-orange-300 hover:bg-orange-50/20 transition-all shadow-xs"
+                className="bg-white border border-gray-200/90 rounded-none p-8 hover:border-orange-300 hover:bg-orange-50/20 transition-all shadow-xs flex items-start gap-4"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-none bg-orange-50 text-[#E87121] flex items-center justify-center shrink-0 border border-orange-200 mt-1">
-                    <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-950 mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-base text-gray-600 leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
+                <CheckCircle2 className="w-5 h-5 text-[#E87121] shrink-0 mt-0.5 stroke-[2]" />
+                <div>
+                  <h3 className="text-xl font-bold text-gray-950 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-base text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}

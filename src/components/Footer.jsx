@@ -48,33 +48,33 @@ export default function Footer({ onOpenContact }) {
             </div>
 
             {/* Social Media Links */}
-            <div className="pt-2 flex items-center gap-3">
+            <div className="pt-2 flex items-center gap-4">
               <a
                 href="https://www.linkedin.com/company/crabster-technology"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-none bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#E87121] hover:border-[#E87121] transition-all"
+                className="text-gray-400 hover:text-[#E87121] transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-4 h-4" />
+                <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="https://www.instagram.com/crabstertechnology/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-none bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#E87121] hover:border-[#E87121] transition-all"
+                className="text-gray-400 hover:text-[#E87121] transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="https://www.youtube.com/@crabstertechnology"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-none bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#E87121] hover:border-[#E87121] transition-all"
+                className="text-gray-400 hover:text-[#E87121] transition-colors"
                 aria-label="YouTube"
               >
-                <Youtube className="w-4 h-4" />
+                <Youtube className="w-5 h-5" />
               </a>
             </div>
           </div>

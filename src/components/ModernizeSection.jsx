@@ -74,15 +74,13 @@ export default function ModernizeSection({ onOpenContact }) {
               A fifteen-year-old line does not need replacing to behave like a newer one. We add the sensing, control and monitoring it was built without — no new machine, and no months of production lost to a rebuild.
             </p>
 
-            {/* Bullet Points with Crabster Orange Icons */}
+            {/* Bullet Points with Clean Crabster Orange Icons */}
             <div className="space-y-4 mb-9 max-w-2xl">
               {points.map((pt, idx) => {
                 const Icon = pt.icon;
                 return (
-                  <div key={idx} className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-none bg-orange-50 text-[#E87121] flex items-center justify-center shrink-0 mt-0.5 border border-orange-200">
-                      <Icon className="w-4 h-4 stroke-[2]" />
-                    </div>
+                  <div key={idx} className="flex items-start gap-3.5">
+                    <Icon className="w-5 h-5 text-[#E87121] shrink-0 mt-1 stroke-[2]" />
                     <p className="text-base sm:text-lg text-gray-800 font-medium leading-relaxed">
                       {pt.text}
                     </p>
