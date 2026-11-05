@@ -28,16 +28,31 @@ export default function ModernizeSection({ onOpenContact }) {
           {/* Left Column: 4K Crisp Machine Photo (No overlay badge) */}
           <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-start">
             <div className="relative w-full max-w-xl lg:max-w-none">
-              <div className="overflow-hidden rounded-none shadow-xl border border-gray-200 bg-gray-100">
-                <img
-                  src="/assets/factory-machine-hd.jpg"
-                  alt="Industrial Machinery Retrofit with Digital Operator Terminal"
-                  className="w-full h-auto object-cover object-center max-h-[500px] xl:max-h-[560px]"
-                  loading="eager"
-                  onError={(e) => {
-                    e.target.src = "/assets/factory-machine-4k.jpg";
-                  }}
-                />
+              <div className="overflow-hidden rounded-none shadow-xl border border-gray-200 bg-gray-100 group relative">
+                <button
+                  type="button"
+                  onClick={onOpenContact}
+                  className="group relative block w-full text-left overflow-hidden rounded-none focus:outline-none"
+                >
+                  <img
+                    src="/assets/factory-machine-hd.jpg"
+                    alt="Industrial Machinery Retrofit with Digital Operator Terminal"
+                    className="w-full h-auto object-cover object-center max-h-[500px] xl:max-h-[560px] transition-transform duration-300 group-hover:scale-105"
+                    loading="eager"
+                    onError={(e) => {
+                      e.target.src = "/assets/factory-machine-4k.jpg";
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 group-hover:bg-black/60 flex flex-col justify-end p-6 sm:p-8">
+                    <span className="inline-block text-xs uppercase tracking-widest text-orange-400 font-semibold mb-1">
+                      Action
+                    </span>
+                    <span className="text-white text-xl sm:text-2xl font-bold flex items-center justify-between">
+                      <span>How production automation works</span>
+                      <ArrowRight className="w-5 h-5 text-orange-400 transform transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
