@@ -75,6 +75,7 @@ export default function HowWeWorkSection() {
                   <div
                     key={idx}
                     onClick={() => setActiveStep(idx)}
+                    onMouseEnter={() => setActiveStep(idx)}
                     className="flex items-start gap-5 sm:gap-7 cursor-pointer group"
                   >
                     {/* Timeline Column: Circle + Centered Vertical Line in a Straight Line */}
@@ -108,6 +109,16 @@ export default function HowWeWorkSection() {
                       <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
                         {step.description}
                       </p>
+
+                      {/* Mobile View: Image right beneath respective content */}
+                      <div className="mt-4 mb-2 lg:hidden overflow-hidden rounded-none shadow-md border border-gray-200 bg-gray-100">
+                        <img
+                          src={step.image}
+                          alt={`${step.title} - Crabster Technology Process`}
+                          className="w-full h-auto object-cover object-center max-h-[300px]"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
 
                   </div>
@@ -116,8 +127,8 @@ export default function HowWeWorkSection() {
             </div>
           </div>
 
-          {/* Right Column: Clean Stage Image */}
-          <div className="lg:col-span-5 xl:col-span-5 lg:sticky lg:top-28">
+          {/* Right Column: Clean Stage Image (Desktop only, interactive on hover) */}
+          <div className="hidden lg:block lg:col-span-5 xl:col-span-5 lg:sticky lg:top-28">
             <div className="relative overflow-hidden rounded-none shadow-xl border border-gray-200 bg-gray-100">
               <div key={activeStep} className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] w-full overflow-hidden animate-in fade-in duration-200">
                 <img

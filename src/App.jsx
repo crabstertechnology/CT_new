@@ -71,6 +71,9 @@ export default function App() {
         onGoToContact={handleGoToContact}
       />
 
+      {/* Fixed Navbar Spacer */}
+      <div className="h-20 shrink-0" aria-hidden="true" />
+
       {/* Main Content Router without Popups */}
       {selectedServiceId ? (
         /* Dedicated Full Page for Selected Service */

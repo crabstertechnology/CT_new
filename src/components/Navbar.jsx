@@ -31,7 +31,7 @@ export default function Navbar({ onSelectService, onNavigateSection, onGoToConta
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all w-full">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-md border-b border-gray-200/40 shadow-xs transition-all w-full">
       {/* Maximum width edge-to-edge padding */}
       <div className="w-full px-6 sm:px-10 lg:px-14 xl:px-20">
         <div className="flex items-center justify-between h-20 w-full">
