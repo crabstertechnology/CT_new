@@ -39,23 +39,23 @@ export default function HowWeWorkSection() {
       id="how-we-work" 
       className="flex flex-col justify-center bg-slate-50/70 border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-10 sm:py-12 w-full"
     >
-      <div className="w-full flex flex-col justify-center">
+      <div className="w-full flex flex-col items-center justify-center">
         
-        {/* Section Header */}
-        <div className="max-w-4xl mb-6 sm:mb-8">
-          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2">
+        {/* Section Header - Centered */}
+        <div className="max-w-3xl mb-8 sm:mb-10 text-center mx-auto">
+          <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2.5">
             HOW WE WORK
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-gray-950 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-gray-950 tracking-tight leading-tight mb-3">
             From the first walk round the plant to a running system
           </h2>
-          <p className="mt-2.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl font-normal">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto font-normal">
             Each stage ends with something you can check before the next one starts: a written scope, a panel design, a tested system.
           </p>
         </div>
 
-        {/* Vertical Connected Timeline — 100% Mathematically Straight Alignment */}
-        <div className="max-w-5xl">
+        {/* Vertical Connected Timeline — Centered Block with Straight Line */}
+        <div className="w-full max-w-2xl sm:max-w-3xl mx-auto">
           <div className="flex flex-col">
             {steps.map((step, idx) => {
               const isLast = idx === steps.length - 1;
@@ -83,7 +83,7 @@ export default function HowWeWorkSection() {
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-950 mb-1 group-hover:text-[#E87121] transition-colors">
                       {step.title}
                     </h3>
-                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl font-normal">
+                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl font-normal">
                       {step.description}
                     </p>
                   </div>
