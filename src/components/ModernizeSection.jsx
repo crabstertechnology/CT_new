@@ -25,29 +25,19 @@ export default function ModernizeSection({ onOpenContact }) {
       <div className="w-full flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
           
-          {/* Left Column: Industrial Plant / Machine Photo */}
+          {/* Left Column: 4K Crisp Machine Photo (No overlay badge) */}
           <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-start">
             <div className="relative w-full max-w-xl lg:max-w-none">
               <div className="overflow-hidden rounded-2xl shadow-xl border border-gray-200 bg-gray-100">
                 <img
-                  src="/assets/factory-machine.jpg"
+                  src="/assets/factory-machine-hd.jpg"
                   alt="Industrial Machinery Retrofit with Digital Operator Terminal"
                   className="w-full h-auto object-cover object-center max-h-[500px] xl:max-h-[560px]"
+                  loading="eager"
                   onError={(e) => {
-                    e.target.src = "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1000&q=80";
+                    e.target.src = "/assets/factory-machine-4k.jpg";
                   }}
                 />
-              </div>
-
-              {/* Decorative engineering spec card */}
-              <div className="hidden sm:flex absolute -bottom-4 -right-4 bg-white border border-gray-200 rounded-xl shadow-xl p-4 items-center gap-3.5 max-w-xs">
-                <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-[#E87121] shrink-0 border border-orange-100">
-                  <TrendingUp className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-xs font-bold text-gray-900">Zero Line Replacement</div>
-                  <div className="text-[11px] text-gray-500">Retrofit during scheduled shift window</div>
-                </div>
               </div>
             </div>
           </div>

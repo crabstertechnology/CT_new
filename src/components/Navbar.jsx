@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
 import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
 
-export default function Navbar({ onOpenContact }) {
+export default function Navbar({ onSelectService, onGoToContact }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdown, setServicesDropdown] = useState(false);
 
   const services = [
-    { title: "Industrial IoT & Edge Solutions", desc: "Sensors, edge acquisition & live floor visibility", href: "#services" },
-    { title: "Automation Panel Boards", desc: "Custom control panels, PLC & motor wiring", href: "#services" },
-    { title: "Process Automation", desc: "Automated temperature, pressure & level control", href: "#services" },
-    { title: "Production Automation", desc: "Machine retrofits & line handling systems", href: "#services" }
+    { id: "iot", title: "Industrial IoT & Edge Solutions", desc: "Sensors, edge acquisition & live floor visibility" },
+    { id: "panels", title: "Automation Panel Boards", desc: "Custom control panels, PLC & motor wiring" },
+    { id: "process", title: "Process Automation", desc: "Automated temperature, pressure & level control" },
+    { id: "production", title: "Production Automation", desc: "Machine retrofits & line handling systems" }
   ];
+
+  const handleServiceClick = (id) => {
+    setServicesDropdown(false);
+    setMobileMenuOpen(false);
+    if (onSelectService) {
+      onSelectService(id);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all w-full">
@@ -20,7 +28,7 @@ export default function Navbar({ onOpenContact }) {
           
           {/* Crabster Logo on Left-most corner */}
           <div className="flex items-center">
-            <a href="#" className="flex items-center gap-3 group">
+            <a href="#" onClick={(e) => { e.preventDefault(); window.location.hash = ''; window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center gap-3 group">
               <img
                 src="/assets/crabster-logo.png"
                 alt="Crabster Technology Logo"
@@ -54,12 +62,11 @@ export default function Navbar({ onOpenContact }) {
                   <div className="px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#E87121]">
                     Our Core Capabilities
                   </div>
-                  {services.map((svc, idx) => (
-                    <a
-                      key={idx}
-                      href={svc.href}
-                      onClick={() => setServicesDropdown(false)}
-                      className="block px-3 py-2.5 rounded-lg hover:bg-orange-50/50 transition-colors group"
+                  {services.map((svc) => (
+                    <button
+                      key={svc.id}
+                      onClick={() => handleServiceClick(svc.id)}
+                      className="w-full text-left block px-3 py-2.5 rounded-lg hover:bg-orange-50/50 transition-colors group cursor-pointer"
                     >
                       <div className="text-sm font-bold text-gray-900 group-hover:text-[#E87121] transition-colors">
                         {svc.title}
@@ -67,7 +74,7 @@ export default function Navbar({ onOpenContact }) {
                       <div className="text-xs text-gray-500 mt-0.5 line-clamp-1">
                         {svc.desc}
                       </div>
-                    </a>
+                    </button>
                   ))}
                 </div>
               )}
@@ -79,16 +86,25 @@ export default function Navbar({ onOpenContact }) {
             <a href="#about" className="hover:text-[#E87121] transition-colors">
               About
             </a>
-            <a href="#contact" className="hover:text-[#E87121] transition-colors">
+            <a 
+              href="#contact" 
+              onClick={(e) => {
+                if (onGoToContact) {
+                  e.preventDefault();
+                  onGoToContact();
+                }
+              }}
+              className="hover:text-[#E87121] transition-colors"
+            >
               Contact
             </a>
           </nav>
 
-          {/* Right Action Button on Right-most corner */}
+          {/* Right Action Button on Right-most corner (Navigates directly, no popup!) */}
           <div className="hidden md:flex items-center">
             <button
-              onClick={onOpenContact}
-              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-md transition-all shadow-md shadow-orange-500/20"
+              onClick={onGoToContact}
+              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-md transition-all shadow-md shadow-orange-500/20 cursor-pointer"
             >
               Talk to an engineer
             </button>
@@ -114,16 +130,15 @@ export default function Navbar({ onOpenContact }) {
             <div className="text-xs font-bold uppercase tracking-wider text-[#E87121] px-3 pt-2">
               Services
             </div>
-            {services.map((svc, idx) => (
-              <a
-                key={idx}
-                href={svc.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 text-sm text-gray-800 hover:bg-orange-50 rounded-lg flex items-center justify-between"
+            {services.map((svc) => (
+              <button
+                key={svc.id}
+                onClick={() => handleServiceClick(svc.id)}
+                className="w-full text-left px-3 py-2 text-sm text-gray-800 hover:bg-orange-50 rounded-lg flex items-center justify-between"
               >
                 <span>{svc.title}</span>
                 <ArrowRight className="w-3.5 h-3.5 text-gray-400" />
-              </a>
+              </button>
             ))}
             <div className="border-t border-gray-100 my-2"></div>
             <a
@@ -142,7 +157,10 @@ export default function Navbar({ onOpenContact }) {
             </a>
             <a
               href="#contact"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                if (onGoToContact) onGoToContact();
+              }}
               className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-lg"
             >
               Contact
@@ -151,7 +169,7 @@ export default function Navbar({ onOpenContact }) {
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  onOpenContact();
+                  if (onGoToContact) onGoToContact();
                 }}
                 className="w-full py-2.5 text-center text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] rounded-md shadow-md"
               >

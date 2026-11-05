@@ -17,7 +17,8 @@ export default function StatementBanner() {
       <div className="w-full flex items-center justify-center">
         <div className="max-w-5xl mx-auto text-center relative z-10 py-6">
           
-          <div className="inline-block text-xs sm:text-sm font-bold uppercase tracking-widest text-[#E87121] mb-6 px-4 py-1.5 rounded-full bg-orange-950/40 border border-orange-700/40">
+          {/* OUR PHILOSOPHY Badge in Crisp White */}
+          <div className="inline-block text-xs sm:text-sm font-bold uppercase tracking-widest text-white mb-6 px-4 py-1.5 rounded-full bg-white/10 border border-white/20">
             OUR PHILOSOPHY
           </div>
 

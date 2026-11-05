@@ -30,7 +30,8 @@ export default function FAQSection() {
     }
   ];
 
-  const [openItems, setOpenItems] = useState([0, 1, 2, 3, 4]);
+  // All questions closed by default - opens ONLY when clicked
+  const [openItems, setOpenItems] = useState([]);
 
   const toggleItem = (index) => {
     if (openItems.includes(index)) {
@@ -68,7 +69,7 @@ export default function FAQSection() {
               <div key={index} className="py-5 sm:py-6 transition-colors">
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full flex items-center justify-between text-left group focus:outline-none"
+                  className="w-full flex items-center justify-between text-left group focus:outline-none cursor-pointer"
                   aria-expanded={isOpen}
                 >
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-950 group-hover:text-[#E87121] transition-colors pr-6">
@@ -84,7 +85,7 @@ export default function FAQSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="mt-3 pr-8 animate-in fade-in duration-150 max-w-4xl">
+                  <div className="mt-4 pr-8 animate-in fade-in duration-200 max-w-4xl">
                     <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
                       {faq.answer}
                     </p>

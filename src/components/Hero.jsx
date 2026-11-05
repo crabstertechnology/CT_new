@@ -42,41 +42,21 @@ export default function Hero({ onOpenContact }) {
                 Explore our services
               </a>
             </div>
-
-            {/* Trust Badges */}
-            <div className="mt-12 pt-6 border-t border-gray-100 flex flex-wrap items-center gap-8 text-xs sm:text-sm text-gray-500">
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#E87121]"></span>
-                <span>Coimbatore Engineering &amp; Assembly</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                <span>On-floor Plant Assessment</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-700"></span>
-                <span>Retrofits for Existing Lines</span>
-              </div>
-            </div>
           </div>
 
-          {/* Right Column: Control Panel Image */}
+          {/* Right Column: 4K Crisp Control Panel Image (No badge overlay) */}
           <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-xl lg:max-w-none">
               <div className="overflow-hidden rounded-2xl shadow-2xl border border-gray-200 bg-gray-100">
                 <img
-                  src="/assets/control-panel.jpg"
+                  src="/assets/control-panel-hd.jpg"
                   alt="Industrial Electrical Control Panel and PLC System by Crabster Technology"
                   className="w-full h-auto object-cover object-center max-h-[520px] xl:max-h-[560px]"
                   loading="eager"
                   onError={(e) => {
-                    e.target.src = "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80";
+                    e.target.src = "/assets/control-panel-4k.jpg";
                   }}
                 />
-                <div className="absolute bottom-4 right-4 bg-black/85 backdrop-blur-md text-white px-3.5 py-1.5 rounded-md text-xs sm:text-sm font-medium tracking-wide flex items-center gap-2 border border-white/10">
-                  <span className="w-2 h-2 rounded-full bg-[#E87121] animate-pulse"></span>
-                  Custom PLC &amp; Edge Integration
-                </div>
               </div>
             </div>
           </div>
