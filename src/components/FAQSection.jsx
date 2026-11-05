@@ -56,7 +56,7 @@ export default function FAQSection() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-gray-950 tracking-tight leading-tight">
             What owners ask us before the first visit
           </h2>
-          <p className="mt-2.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl font-normal text-justify">
+          <p className="mt-2.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl font-normal">
             Straight answers to what comes up on almost every first call.
           </p>
         </div>
@@ -86,7 +86,7 @@ export default function FAQSection() {
 
                 {isOpen && (
                   <div className="mt-3 pr-8 animate-in fade-in duration-200 max-w-4xl">
-                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal text-justify">
+                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
                       {faq.answer}
                     </p>
                   </div>

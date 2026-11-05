@@ -52,7 +52,7 @@ export default function ServicesSection({ onSelectService }) {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-gray-950 tracking-tight leading-tight">
             Four ways we modernise a plant
           </h2>
-          <p className="mt-2.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl text-justify">
+          <p className="mt-2.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl">
             Start with the one that matches your problem. Most projects end up combining two — sensors on the machines, and a panel or controller that acts on what they report.
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function ServicesSection({ onSelectService }) {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 font-normal text-justify">
+                  <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 font-normal">
                     {svc.description}
                   </p>
                 </div>

@@ -70,7 +70,7 @@ export default function ModernizeSection({ onOpenContact }) {
             </h2>
 
             {/* Description */}
-            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-normal mb-6 max-w-2xl text-justify">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-normal mb-6 max-w-2xl">
               A fifteen-year-old line does not need replacing to behave like a newer one. We add the sensing, control and monitoring it was built without — no new machine, and no months of production lost to a rebuild.
             </p>
 

@@ -49,7 +49,7 @@ export default function HowWeWorkSection() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-gray-950 tracking-tight leading-tight">
             From the first walk round the plant to a running system
           </h2>
-          <p className="mt-2.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl font-normal text-justify">
+          <p className="mt-2.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl font-normal">
             Each stage ends with something you can check before the next one starts: a written scope, a panel design, a tested system.
           </p>
         </div>
@@ -83,7 +83,7 @@ export default function HowWeWorkSection() {
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-950 mb-1 group-hover:text-[#E87121] transition-colors">
                       {step.title}
                     </h3>
-                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl font-normal text-justify">
+                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl font-normal">
                       {step.description}
                     </p>
                   </div>

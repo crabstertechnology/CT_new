@@ -14,12 +14,6 @@
     border-radius: 0px !important;
   }
 
-  /* Justified text alignment per design requirement */
-  p {
-    text-align: justify;
-    text-justify: inter-word;
-  }
-
   /* Smooth natural scroll — no snap forcing empty space */
 }
 

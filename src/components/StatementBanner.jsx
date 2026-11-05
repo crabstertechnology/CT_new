@@ -28,7 +28,7 @@ export default function StatementBanner() {
           </h2>
 
           {/* Narrative Description */}
-          <p className="mt-4 text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto font-normal text-justify">
+          <p className="mt-6 text-slate-300 text-lg sm:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto font-normal">
             Most of it is priced, sold and explained for plants ten times your size. We build it for the ones doing the actual work — sized to the problem, described in plain terms, and quoted so you can see what you are paying for.
           </p>
 

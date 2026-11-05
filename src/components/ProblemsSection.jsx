@@ -45,7 +45,7 @@ export default function ProblemsSection() {
             The same four problems, in almost every plant we visit
           </h2>
 
-          <p className="text-sm sm:text-base text-gray-500 leading-relaxed max-w-xl mx-auto font-normal text-justify">
+          <p className="text-sm sm:text-base text-gray-500 leading-relaxed max-w-xl mx-auto font-normal text-center">
             They get filed as staffing problems or maintenance problems for years. They are visibility problems — by the time the numbers exist, the shift is already over.
           </p>
         </div>
@@ -77,7 +77,7 @@ export default function ProblemsSection() {
                   )}
                 </h3>
 
-                <p className="text-sm sm:text-base text-gray-500 leading-relaxed font-normal max-w-sm text-justify">
+                <p className="text-sm sm:text-base text-gray-500 leading-relaxed font-normal max-w-sm text-center">
                   {item.description}
                 </p>
               </div>

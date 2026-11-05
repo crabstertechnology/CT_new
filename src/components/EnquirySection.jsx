@@ -31,7 +31,7 @@ export default function EnquirySection() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-gray-950 tracking-tight leading-tight mb-4 max-w-xl">
               Tell us what the plant is doing now
             </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-normal max-w-xl text-justify">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-normal max-w-xl">
               Describe the machine, line or process that is not behaving the way you want. We will come back with questions — and if it looks like a fit, arrange a visit to see it running.
             </p>
           </div>

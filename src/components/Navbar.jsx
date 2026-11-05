@@ -108,16 +108,6 @@ export default function Navbar({ onSelectService, onGoToContact }) {
             </a>
           </nav>
 
-          {/* Right Action Button on Right-most corner - Sharp Edges */}
-          <div className="hidden md:flex items-center">
-            <button
-              onClick={onGoToContact}
-              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none transition-all shadow-md shadow-orange-500/20 cursor-pointer"
-            >
-              Talk to an engineer
-            </button>
-          </div>
-
           {/* Mobile Menu Button - Sharp */}
           <div className="flex md:hidden items-center">
             <button

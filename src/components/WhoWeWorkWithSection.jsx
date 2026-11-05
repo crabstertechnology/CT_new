@@ -43,7 +43,7 @@ export default function WhoWeWorkWithSection() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-gray-950 tracking-tight leading-tight">
             Built for the way Tamil Nadu's factories run
           </h2>
-          <p className="mt-2.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl font-normal text-justify">
+          <p className="mt-2.5 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl font-normal">
             Most of our work sits within a few hours of Coimbatore — Tiruppur, Erode, Pollachi and the surrounding industrial clusters — alongside general manufacturing and processing units.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function WhoWeWorkWithSection() {
               <h3 className="text-lg sm:text-xl lg:text-[1.5rem] font-bold text-gray-950 group-hover:text-[#E87121] transition-colors mb-2">
                 {ind.title}
               </h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal text-justify">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
                 {ind.description}
               </p>
             </div>

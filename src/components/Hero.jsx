@@ -17,22 +17,29 @@ export default function Hero({ onOpenContact }) {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] xl:text-[3.6rem] font-extrabold text-gray-950 tracking-tight leading-[1.12] mb-4 max-w-3xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] xl:text-[3.6rem] font-extrabold text-gray-950 tracking-tight leading-[1.12] mb-5 max-w-3xl">
               Upgrade the plant you already have, without enterprise prices.
             </h1>
 
             {/* Sub-paragraph */}
-            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-normal mb-6 max-w-2xl text-justify">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-normal mb-8 max-w-2xl">
               Crabster Technology designs and builds Industrial IoT, control panels and automation systems for small and mid-sized manufacturers across Tamil Nadu — starting from the problem on your floor, not a product catalogue.
             </p>
 
-            {/* CTA Button */}
-            <div className="flex items-center">
+            {/* CTA Buttons - Side by Side */}
+            <div className="flex flex-row items-center gap-4 flex-nowrap">
+              <button
+                onClick={onOpenContact}
+                className="whitespace-nowrap px-7 py-3.5 text-sm sm:text-base font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-md shadow-orange-500/20 transition-all duration-150 cursor-pointer"
+              >
+                Talk to an engineer
+              </button>
+
               <a
                 href="#services"
-                className="px-7 py-3.5 text-sm sm:text-base font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-md shadow-orange-500/20 transition-all duration-150 inline-flex items-center gap-2"
+                className="whitespace-nowrap px-7 py-3.5 text-sm sm:text-base font-semibold text-gray-800 bg-white border border-gray-300 hover:border-[#E87121] hover:text-[#E87121] hover:bg-orange-50/40 active:scale-[0.98] rounded-none transition-all duration-150"
               >
-                <span>Explore our services</span>
+                Explore our services
               </a>
             </div>
           </div>
