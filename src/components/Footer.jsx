@@ -1,9 +1,27 @@
 import React from 'react';
 import { MapPin, ArrowUp, Phone, Globe, ExternalLink, Linkedin, Instagram, Youtube } from 'lucide-react';
 
-export default function Footer({ onOpenContact }) {
+export default function Footer({ onSelectService, onNavigateSection, onOpenContact }) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNav = (e, sectionId) => {
+    e.preventDefault();
+    if (onNavigateSection) {
+      onNavigateSection(sectionId);
+    } else {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleService = (e, serviceId) => {
+    e.preventDefault();
+    if (onSelectService) {
+      onSelectService(serviceId);
+    } else {
+      window.location.hash = `service-${serviceId}`;
+    }
   };
 
   return (
@@ -15,7 +33,11 @@ export default function Footer({ onOpenContact }) {
           <div className="md:col-span-5 lg:col-span-5 space-y-5">
             {/* Crabster Logo */}
             <div>
-              <a href="#" className="flex items-center gap-3 group inline-flex">
+              <a 
+                href="#" 
+                onClick={(e) => handleNav(e, 'hero')} 
+                className="flex items-center gap-3 group inline-flex"
+              >
                 <img
                   src="/assets/crabster-logo.png"
                   alt="Crabster Technology Logo"
@@ -89,22 +111,38 @@ export default function Footer({ onOpenContact }) {
               </h4>
               <ul className="space-y-2.5 text-sm sm:text-base text-gray-400">
                 <li>
-                  <a href="#services" className="hover:text-[#E87121] transition-colors">
+                  <a 
+                    href="#service-iot" 
+                    onClick={(e) => handleService(e, 'iot')} 
+                    className="hover:text-[#E87121] transition-colors"
+                  >
                     Industrial IoT &amp; Edge Solutions
                   </a>
                 </li>
                 <li>
-                  <a href="#services" className="hover:text-[#E87121] transition-colors">
+                  <a 
+                    href="#service-panels" 
+                    onClick={(e) => handleService(e, 'panels')} 
+                    className="hover:text-[#E87121] transition-colors"
+                  >
                     Automation Panel Boards
                   </a>
                 </li>
                 <li>
-                  <a href="#services" className="hover:text-[#E87121] transition-colors">
+                  <a 
+                    href="#service-process" 
+                    onClick={(e) => handleService(e, 'process')} 
+                    className="hover:text-[#E87121] transition-colors"
+                  >
                     Process Automation
                   </a>
                 </li>
                 <li>
-                  <a href="#services" className="hover:text-[#E87121] transition-colors">
+                  <a 
+                    href="#service-production" 
+                    onClick={(e) => handleService(e, 'production')} 
+                    className="hover:text-[#E87121] transition-colors"
+                  >
                     Production Automation
                   </a>
                 </li>
@@ -123,17 +161,29 @@ export default function Footer({ onOpenContact }) {
                   </a>
                 </li>
                 <li>
-                  <a href="#industries" className="hover:text-[#E87121] transition-colors">
+                  <a 
+                    href="#industries" 
+                    onClick={(e) => handleNav(e, 'industries')} 
+                    className="hover:text-[#E87121] transition-colors"
+                  >
                     Industries
                   </a>
                 </li>
                 <li>
-                  <a href="#about" className="hover:text-[#E87121] transition-colors">
+                  <a 
+                    href="#about" 
+                    onClick={(e) => handleNav(e, 'about')} 
+                    className="hover:text-[#E87121] transition-colors"
+                  >
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="hover:text-[#E87121] transition-colors">
+                  <a 
+                    href="#contact" 
+                    onClick={(e) => handleNav(e, 'contact')} 
+                    className="hover:text-[#E87121] transition-colors"
+                  >
                     Contact
                   </a>
                 </li>

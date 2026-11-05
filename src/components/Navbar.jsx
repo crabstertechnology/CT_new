@@ -1,9 +1,19 @@
 import React, { useState } from 'react';
 import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
 
-export default function Navbar({ onSelectService, onGoToContact }) {
+export default function Navbar({ onSelectService, onNavigateSection, onGoToContact }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdown, setServicesDropdown] = useState(false);
+
+  const handleNav = (e, sectionId) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    if (onNavigateSection) {
+      onNavigateSection(sectionId);
+    } else {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const services = [
     { id: "iot", title: "Industrial IoT & Edge Solutions", desc: "Sensors, edge acquisition & live floor visibility" },
@@ -88,20 +98,23 @@ export default function Navbar({ onSelectService, onGoToContact }) {
               )}
             </div>
 
-            <a href="#industries" className="hover:text-[#E87121] transition-colors">
+            <a 
+              href="#industries" 
+              onClick={(e) => handleNav(e, 'industries')}
+              className="hover:text-[#E87121] transition-colors"
+            >
               Industries
             </a>
-            <a href="#about" className="hover:text-[#E87121] transition-colors">
+            <a 
+              href="#about" 
+              onClick={(e) => handleNav(e, 'about')}
+              className="hover:text-[#E87121] transition-colors"
+            >
               About
             </a>
             <a 
               href="#contact" 
-              onClick={(e) => {
-                if (onGoToContact) {
-                  e.preventDefault();
-                  onGoToContact();
-                }
-              }}
+              onClick={(e) => handleNav(e, 'contact')}
               className="hover:text-[#E87121] transition-colors"
             >
               Contact
@@ -141,24 +154,21 @@ export default function Navbar({ onSelectService, onGoToContact }) {
             <div className="border-t border-gray-100 my-2"></div>
             <a
               href="#industries"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(e) => handleNav(e, 'industries')}
               className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-none"
             >
               Industries
             </a>
             <a
               href="#about"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(e) => handleNav(e, 'about')}
               className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-none"
             >
               About
             </a>
             <a
               href="#contact"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                if (onGoToContact) onGoToContact();
-              }}
+              onClick={(e) => handleNav(e, 'contact')}
               className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-none"
             >
               Contact

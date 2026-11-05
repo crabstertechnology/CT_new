@@ -47,14 +47,18 @@ export default function App() {
   };
 
   const handleGoToContact = () => {
+    handleNavigateSection('contact');
+  };
+
+  const handleNavigateSection = (sectionId) => {
     if (selectedServiceId) {
       setSelectedServiceId(null);
       window.location.hash = '';
       setTimeout(() => {
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
       }, 100);
     } else {
-      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -63,6 +67,7 @@ export default function App() {
       {/* 1. Header Navigation - Full Width Edge to Edge */}
       <Navbar 
         onSelectService={handleSelectService}
+        onNavigateSection={handleNavigateSection}
         onGoToContact={handleGoToContact}
       />
 
@@ -107,7 +112,11 @@ export default function App() {
       )}
 
       {/* Site Footer - Full Width Edge to Edge */}
-      <Footer onOpenContact={handleGoToContact} />
+      <Footer 
+        onSelectService={handleSelectService}
+        onNavigateSection={handleNavigateSection}
+        onOpenContact={handleGoToContact} 
+      />
     </div>
   );
 }

@@ -8,7 +8,7 @@ export default function StatementBanner() {
 
   return (
     <section 
-      id="mission" 
+      id="about" 
       className="flex flex-col justify-center bg-[#09111E] text-white relative px-6 sm:px-10 lg:px-14 xl:px-20 py-20 sm:py-24 lg:py-28 overflow-hidden w-full"
     >
       {/* Background radial gradient with Crabster Orange tint */}
