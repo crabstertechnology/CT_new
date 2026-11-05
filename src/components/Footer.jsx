@@ -41,12 +41,8 @@ export default function Footer({ onOpenContact }) {
               </div>
               <div className="flex items-center gap-2.5 text-gray-300">
                 <Globe className="w-4 h-4 text-[#E87121] shrink-0" />
-                <a href="https://crabstertech.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors inline-flex items-center gap-1">
-                  crabstertech.in <ExternalLink className="w-3 h-3 text-gray-500" />
-                </a>
-                <span className="text-gray-600">|</span>
                 <a href="https://shop.crabstertech.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors inline-flex items-center gap-1">
-                  Store <ExternalLink className="w-3 h-3 text-gray-500" />
+                  shop.crabstertech.in <ExternalLink className="w-3 h-3 text-gray-500" />
                 </a>
               </div>
             </div>
@@ -121,11 +117,6 @@ export default function Footer({ onOpenContact }) {
                 Company &amp; Portals
               </h4>
               <ul className="space-y-2.5 text-sm sm:text-base text-gray-400">
-                <li>
-                  <a href="https://crabstertech.in/" target="_blank" rel="noopener noreferrer" className="hover:text-[#E87121] transition-colors flex items-center gap-1.5">
-                    Official Website <ExternalLink className="w-3.5 h-3.5 text-gray-500" />
-                  </a>
-                </li>
                 <li>
                   <a href="https://shop.crabstertech.in/" target="_blank" rel="noopener noreferrer" className="hover:text-[#E87121] transition-colors flex items-center gap-1.5">
                     Crabster Store <ExternalLink className="w-3.5 h-3.5 text-gray-500" />

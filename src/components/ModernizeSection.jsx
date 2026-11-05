@@ -91,17 +91,6 @@ export default function ModernizeSection({ onOpenContact }) {
               })}
             </div>
 
-            {/* Outlined Action Button */}
-            <div>
-              <button
-                onClick={onOpenContact}
-                className="inline-flex items-center gap-2 px-7 py-3.5 text-sm sm:text-base font-semibold text-gray-900 bg-white border border-gray-300 hover:border-[#E87121] hover:text-[#E87121] hover:bg-orange-50/40 active:scale-[0.98] rounded-none transition-all duration-150"
-              >
-                <span>How production automation works</span>
-                <ArrowRight className="w-4 h-4 text-[#E87121]" />
-              </button>
-            </div>
-
           </div>
 
         </div>
