@@ -1,0 +1,106 @@
+import React from 'react';
+import { Wrench, Radio, TrendingUp, ArrowRight } from 'lucide-react';
+
+export default function ModernizeSection({ onOpenContact }) {
+  const points = [
+    {
+      icon: Wrench,
+      text: "Existing panels, drives and machine controls rebuilt or brought up to current standards."
+    },
+    {
+      icon: Radio,
+      text: "Sensors and data acquisition fitted to machines that were never instrumented."
+    },
+    {
+      icon: TrendingUp,
+      text: "Monitoring that proves the improvement machine by machine, not just at month end."
+    }
+  ];
+
+  return (
+    <section 
+      id="modernize" 
+      className="page-section min-h-screen flex flex-col justify-center bg-white border-b border-gray-100 relative px-6 sm:px-10 lg:px-14 xl:px-20 py-20 w-full"
+    >
+      <div className="w-full flex items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
+          
+          {/* Left Column: Industrial Plant / Machine Photo */}
+          <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-start">
+            <div className="relative w-full max-w-xl lg:max-w-none">
+              <div className="overflow-hidden rounded-2xl shadow-xl border border-gray-200 bg-gray-100">
+                <img
+                  src="/assets/factory-machine.jpg"
+                  alt="Industrial Machinery Retrofit with Digital Operator Terminal"
+                  className="w-full h-auto object-cover object-center max-h-[500px] xl:max-h-[560px]"
+                  onError={(e) => {
+                    e.target.src = "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1000&q=80";
+                  }}
+                />
+              </div>
+
+              {/* Decorative engineering spec card */}
+              <div className="hidden sm:flex absolute -bottom-4 -right-4 bg-white border border-gray-200 rounded-xl shadow-xl p-4 items-center gap-3.5 max-w-xs">
+                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-700 shrink-0">
+                  <TrendingUp className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-gray-900">Zero Line Replacement</div>
+                  <div className="text-[11px] text-gray-500">Retrofit during scheduled shift window</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Copy & Checklist */}
+          <div className="lg:col-span-7 xl:col-span-7">
+            {/* Eyebrow */}
+            <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-700 mb-3">
+              THE AFFORDABLE ROUTE
+            </div>
+
+            {/* Main Heading */}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-950 tracking-tight leading-tight mb-6 max-w-3xl">
+              Modernise the machine you already own
+            </h2>
+
+            {/* Description */}
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed font-normal mb-8 max-w-2xl">
+              A fifteen-year-old line does not need replacing to behave like a newer one. We add the sensing, control and monitoring it was built without — no new machine, and no months of production lost to a rebuild.
+            </p>
+
+            {/* Bullet Points with Blue Icons */}
+            <div className="space-y-4 mb-9 max-w-2xl">
+              {points.map((pt, idx) => {
+                const Icon = pt.icon;
+                return (
+                  <div key={idx} className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center shrink-0 mt-0.5 border border-blue-100">
+                      <Icon className="w-4 h-4 stroke-[2]" />
+                    </div>
+                    <p className="text-base sm:text-lg text-gray-800 font-medium leading-relaxed">
+                      {pt.text}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Outlined Action Button */}
+            <div>
+              <button
+                onClick={onOpenContact}
+                className="inline-flex items-center gap-2 px-7 py-3.5 text-sm sm:text-base font-semibold text-[#0E3B64] bg-white border border-gray-300 hover:border-gray-400 hover:bg-gray-50 active:scale-[0.98] rounded transition-all duration-150"
+              >
+                <span>How production automation works</span>
+                <ArrowRight className="w-4 h-4 text-blue-800" />
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
