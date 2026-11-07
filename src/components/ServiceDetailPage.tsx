@@ -1,9 +1,37 @@
 import React, { useEffect, useState } from 'react';
+import SEO from './SEO';
 import { 
   ArrowLeft, CheckCircle2, Send, Cpu, Radio, Gauge, Cog, 
   Phone, ShieldCheck, MapPin, ArrowRight, Zap, FileText, 
   Settings, Clock, Award, Check, Loader2, AlertCircle
 } from 'lucide-react';
+
+const seoMap: Record<string, { title: string; description: string; keywords: string; image: string }> = {
+  iot: {
+    title: "Industrial IoT & Floor Visibility Dashboards | Crabster Technology Coimbatore",
+    description: "Real-time visibility into machine uptime, cycle times, and floor bottlenecks without replacing machinery. Edge hardware & live floor TV dashboards in Tamil Nadu.",
+    keywords: "Industrial IoT Coimbatore, IIoT Tamil Nadu, shop floor dashboards, machine downtime tracking, OEE monitoring, non-invasive sensors",
+    image: "https://www.crabstertech.in/assets/step-01-study.jpg"
+  },
+  panels: {
+    title: "Automation Panel Boards & PLC Integration | Crabster Technology Coimbatore",
+    description: "Custom-built industrial-grade electrical & automation control panels. CAD design, wiring, PLC programming, and full bench testing in Coimbatore.",
+    keywords: "Automation panel boards Coimbatore, PLC control panels, VFD control cabinets, electrical automation panel, motor control centers Tamil Nadu",
+    image: "https://www.crabstertech.in/assets/control-panel-hd.jpg"
+  },
+  process: {
+    title: "Process Automation & Batch Control Systems | Crabster Technology",
+    description: "Automated temperature, pressure, and fluid regulation that eliminates human error and guarantees repeatable batch consistency across Tamil Nadu.",
+    keywords: "Process automation Tamil Nadu, batch process control, PID temperature controller, CIP automation, chemical plant automation Coimbatore",
+    image: "https://www.crabstertech.in/assets/step-03-design.jpg"
+  },
+  production: {
+    title: "Production Automation & Machine Retrofits | Crabster Technology Coimbatore",
+    description: "Upgrade existing manual machinery with automated feeding, motion control, and safety systems. Cut cycle times by 30-50% without buying new machines.",
+    keywords: "Machine retrofit Coimbatore, line automation, hydraulic press retrofit, automated part handling, plant modernisation Tamil Nadu",
+    image: "https://www.crabstertech.in/assets/factory-machine-hd.jpg"
+  }
+};
 
 const serviceDataMap = {
   iot: {
@@ -284,8 +312,44 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
     document.getElementById('service-enquiry')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const seoData = seoMap[serviceId] || seoMap.iot;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.title,
+    "serviceType": service.eyebrow,
+    "description": seoData.description,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Crabster Technology",
+      "url": "https://www.crabstertech.in",
+      "telephone": "+91 98765 43210",
+      "email": "crabstertech@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Coimbatore",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "IN"
+      }
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Tamil Nadu"
+    },
+    "url": `https://www.crabstertech.in/#service-${serviceId}`
+  };
+
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans w-full">
+      <SEO 
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonicalUrl={`https://www.crabstertech.in/#service-${serviceId}`}
+        image={seoData.image}
+        jsonLd={jsonLd}
+      />
       
       {/* 1. Sub-Header Navigation & Breadcrumbs */}
       <div className="bg-[#09111E] border-b border-gray-800 text-gray-300 w-full px-6 sm:px-10 lg:px-14 xl:px-20 py-3.5">

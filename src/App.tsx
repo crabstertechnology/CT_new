@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import SEO from './components/SEO';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import StatementBanner from './components/StatementBanner';
@@ -85,6 +86,60 @@ export default function App() {
       ) : (
         /* Full Home Landing Page */
         <main className="flex-1 w-full">
+          <SEO 
+            title="Crabster Technology | Industrial IoT, Panels & Plant Automation — Coimbatore"
+            description="Upgrade your existing manufacturing machinery without enterprise costs. Custom automation panel boards, non-invasive Industrial IoT, and machine retrofits in Coimbatore, Tamil Nadu."
+            keywords="Industrial IoT Coimbatore, Automation Panel Boards, Process Automation, Machine Retrofit, PLC Integration, Tamil Nadu Manufacturing Automation, Crabster Technology"
+            canonicalUrl="https://www.crabstertech.in/"
+            ogType="website"
+            image="https://www.crabstertech.in/assets/crabster-logo.png"
+            jsonLd={{
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "LocalBusiness",
+                  "@id": "https://www.crabstertech.in/#organization",
+                  "name": "Crabster Technology",
+                  "url": "https://www.crabstertech.in",
+                  "logo": "https://www.crabstertech.in/assets/crabster-logo.png",
+                  "image": "https://www.crabstertech.in/assets/control-panel-hd.jpg",
+                  "description": "Crabster Technology designs and builds Industrial IoT, custom automation panel boards, and machine control retrofits for manufacturers across Tamil Nadu, India.",
+                  "email": "crabstertech@gmail.com",
+                  "telephone": "+91 98765 43210",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Coimbatore",
+                    "addressRegion": "Tamil Nadu",
+                    "postalCode": "641001",
+                    "addressCountry": "IN"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "11.0168",
+                    "longitude": "76.9558"
+                  },
+                  "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Industrial Automation Services",
+                    "itemListElement": [
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Industrial IoT & Edge Solutions" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automation Panel Boards & PLC Integration" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Process Automation & Closed-Loop Control" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Production Automation & Machine Retrofits" } }
+                    ]
+                  }
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://www.crabstertech.in/#website",
+                  "url": "https://www.crabstertech.in",
+                  "name": "Crabster Technology",
+                  "publisher": { "@id": "https://www.crabstertech.in/#organization" }
+                }
+              ]
+            }}
+          />
+
           {/* Page 1: Hero Section */}
           <Hero onOpenContact={handleGoToContact} />
 
