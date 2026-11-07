@@ -36,3 +36,4 @@ COPY --from=builder /app/backend/dist ./backend/dist
 EXPOSE 5000
 
 CMD ["node", "backend/dist/server.js"]
+
