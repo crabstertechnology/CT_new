@@ -6,7 +6,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://crabstertech.com/</loc>
+    <loc>https://www.crabstertech.in/</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- Capability: Industrial IoT & Edge Solutions -->
   <url>
-    <loc>https://crabstertech.com/#service-iot</loc>
+    <loc>https://www.crabstertech.in/#service-iot</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -22,7 +22,7 @@
 
   <!-- Capability: Automation Panel Boards -->
   <url>
-    <loc>https://crabstertech.com/#service-panels</loc>
+    <loc>https://www.crabstertech.in/#service-panels</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -30,7 +30,7 @@
 
   <!-- Capability: Process Automation -->
   <url>
-    <loc>https://crabstertech.com/#service-process</loc>
+    <loc>https://www.crabstertech.in/#service-process</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -38,7 +38,7 @@
 
   <!-- Capability: Production Automation & Machinery Retrofits -->
   <url>
-    <loc>https://crabstertech.com/#service-production</loc>
+    <loc>https://www.crabstertech.in/#service-production</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -46,7 +46,7 @@
 
   <!-- Floor Problems Solved -->
   <url>
-    <loc>https://crabstertech.com/#problems</loc>
+    <loc>https://www.crabstertech.in/#problems</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -54,7 +54,7 @@
 
   <!-- How We Work (01-05 Implementation Stages) -->
   <url>
-    <loc>https://crabstertech.com/#how-we-work</loc>
+    <loc>https://www.crabstertech.in/#how-we-work</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -62,7 +62,7 @@
 
   <!-- Industries & Sectors Served -->
   <url>
-    <loc>https://crabstertech.com/#who-we-work-with</loc>
+    <loc>https://www.crabstertech.in/#who-we-work-with</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -70,7 +70,7 @@
 
   <!-- Common Questions (FAQ) -->
   <url>
-    <loc>https://crabstertech.com/#faq</loc>
+    <loc>https://www.crabstertech.in/#faq</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -78,11 +78,10 @@
 
   <!-- Contact & Plant Visit Enquiry -->
   <url>
-    <loc>https://crabstertech.com/#contact</loc>
+    <loc>https://www.crabstertech.in/#contact</loc>
     <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
 </urlset>
-

@@ -3,5 +3,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://crabstertech.com/sitemap.xml
-
+Sitemap: https://www.crabstertech.in/sitemap.xml
