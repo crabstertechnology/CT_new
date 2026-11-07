@@ -7,20 +7,28 @@
     "dev": "concurrently -k -n \"FRONTEND,BACKEND\" -c \"cyan,green\" \"npm run dev:frontend\" \"npm run dev:backend\"",
     "dev:frontend": "vite",
     "dev:backend": "npm --prefix backend run dev",
-    "build": "tsc && vite build && (npm --prefix backend run build || true)",
+    "build": "tsc && vite build",
     "build:frontend": "tsc && vite build",
+    "build:full": "tsc && vite build && npm --prefix backend run build",
     "start": "node backend/dist/server.js",
     "preview": "vite preview"
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
     "lucide-react": "^0.475.0",
+    "nodemailer": "^10.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwind-merge": "^2.6.0"
+    "tailwind-merge": "^2.6.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@netlify/functions": "^5.3.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
     "@types/node": "^26.6.6",
     "@types/nodemailer": "^8.0.2",
     "@types/react": "^18.3.31",
@@ -28,7 +36,6 @@
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "concurrently": "^9.2.5",
-    "nodemailer": "^10.3.1",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "typescript": "^7.0.2",
