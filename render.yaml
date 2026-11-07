@@ -9,9 +9,8 @@ services:
       - key: NODE_ENV
         value: production
       - key: TARGET_EMAIL
-        value: crabstertech@gmail.com
+        sync: false
       - key: EMAIL_USER
         sync: false
       - key: EMAIL_PASS
         sync: false
-

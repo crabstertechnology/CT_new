@@ -2,6 +2,9 @@
   command = "npm run build:frontend"
   publish = "dist"
 
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "TARGET_EMAIL,EMAIL_USER"
+
 [functions]
   directory = "netlify/functions"
 
@@ -16,4 +19,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
