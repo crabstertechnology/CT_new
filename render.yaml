@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: crabster-technology
+    runtime: node
+    plan: free
+    buildCommand: npm install && cd backend && npm install && cd .. && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TARGET_EMAIL
+        value: crabstertech@gmail.com
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false

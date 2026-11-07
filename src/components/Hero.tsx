@@ -54,7 +54,7 @@ export default function Hero({ onOpenContact }) {
                   className="w-full h-auto object-cover object-center max-h-[520px] xl:max-h-[560px] rounded-none"
                   loading="eager"
                   onError={(e) => {
-                    e.target.src = "/assets/control-panel-4k.jpg";
+                    (e.currentTarget as HTMLImageElement).src = "/assets/control-panel-4k.jpg";
                   }}
                 />
               </div>

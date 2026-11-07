@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { 
   ArrowLeft, CheckCircle2, Send, Cpu, Radio, Gauge, Cog, 
   Phone, ShieldCheck, MapPin, ArrowRight, Zap, FileText, 
-  Settings, Clock, Award, Check
+  Settings, Clock, Award, Check, Loader2, AlertCircle
 } from 'lucide-react';
 
 const serviceDataMap = {
@@ -228,25 +228,56 @@ const serviceDataMap = {
   }
 };
 
-export default function ServiceDetailPage({ serviceId, onBack, onNavigateService }) {
+export default function ServiceDetailPage({ serviceId, onBack, onNavigateService }: { serviceId: string; onBack: () => void; onNavigateService: (id: string) => void }) {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: '',
+    email: '',
     phone: '',
     company: '',
     message: ''
   });
 
-  const service = serviceDataMap[serviceId] || serviceDataMap.iot;
+  const service = serviceDataMap[serviceId as keyof typeof serviceDataMap] || serviceDataMap.iot;
   const Icon = service.icon;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [serviceId]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setErrorMessage(null);
+
+    try {
+      const response = await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          description: `[Requirement for ${service.title}]\nCompany: ${formData.company}\nDetails / Problem:\n${formData.message}`,
+        }),
+      });
+
+      const data = await response.json();
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || 'Failed to submit requirement');
+      }
+
+      setSubmitted(true);
+    } catch (err: any) {
+      console.error('Error submitting requirement:', err);
+      setErrorMessage(err.message || 'Something went wrong while sending your requirement.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const scrollToEnquiry = () => {
@@ -549,7 +580,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                 <button
                   onClick={() => {
                     setSubmitted(false);
-                    setFormData({ name: '', phone: '', company: '', message: '' });
+                    setFormData({ name: '', email: '', phone: '', company: '', message: '' });
                   }}
                   className="px-6 py-2.5 text-sm font-bold text-[#E87121] hover:underline cursor-pointer"
                 >
@@ -562,6 +593,13 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                   Send Requirement for {service.title}
                 </div>
 
+                {errorMessage && (
+                  <div className="flex items-start gap-2 bg-red-50 border border-red-200 text-red-800 p-3 text-xs">
+                    <AlertCircle className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
+                    <p>{errorMessage}</p>
+                  </div>
+                )}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider mb-1.5">
@@ -573,9 +611,27 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                       placeholder="e.g. Ramesh Kumar"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none"
+                      disabled={loading}
+                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none disabled:opacity-60"
                     />
                   </div>
+                  <div>
+                    <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider mb-1.5">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      placeholder="you@company.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      disabled={loading}
+                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none disabled:opacity-60"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider mb-1.5">
                       Phone / WhatsApp *
@@ -586,45 +642,58 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                       placeholder="+91 98765 43210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none"
+                      disabled={loading}
+                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none disabled:opacity-60"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider mb-1.5">
+                      Factory / Company Name *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="e.g. Apex Engineering Works"
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      disabled={loading}
+                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none disabled:opacity-60"
                     />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider mb-1.5">
-                    Factory / Company Name *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="e.g. Apex Engineering Works, Coimbatore"
-                    value={formData.company}
-                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider mb-1.5">
-                    Machine Make, Model or Floor Problem
+                    Machine Make, Model or Floor Problem *
                   </label>
                   <textarea
-                    rows="3"
+                    required
+                    rows={3}
                     placeholder="Describe your current machines, controllers, or what you want automated..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none resize-none"
+                    disabled={loading}
+                    className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none resize-none disabled:opacity-60"
                   ></textarea>
                 </div>
 
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-3.5 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-md shadow-orange-500/20 transition-all inline-flex items-center justify-center gap-2 cursor-pointer"
+                    disabled={loading}
+                    className="w-full sm:w-auto px-8 py-3.5 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-md shadow-orange-500/20 transition-all inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    <Send className="w-4 h-4" />
-                    <span>Submit Requirement to Engineer</span>
+                    {loading ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        <span>Sending Requirement...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4" />
+                        <span>Submit Requirement to Engineer</span>
+                      </>
+                    )}
                   </button>
                 </div>
               </form>

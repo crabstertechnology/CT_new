@@ -40,7 +40,7 @@ export default function ModernizeSection({ onOpenContact }) {
                     className="w-full h-auto object-cover object-center max-h-[500px] xl:max-h-[560px] transition-transform duration-300 group-hover:scale-105"
                     loading="eager"
                     onError={(e) => {
-                      e.target.src = "/assets/factory-machine-4k.jpg";
+                      (e.currentTarget as HTMLImageElement).src = "/assets/factory-machine-4k.jpg";
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 group-hover:bg-black/60 flex flex-col justify-end p-6 sm:p-8">

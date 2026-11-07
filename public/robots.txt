@@ -1,0 +1,6 @@
+# Robots.txt for Crabster Technology
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://crabstertech.com/sitemap.xml
