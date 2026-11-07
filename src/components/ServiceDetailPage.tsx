@@ -337,7 +337,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       "@type": "AdministrativeArea",
       "name": "Tamil Nadu"
     },
-    "url": `https://www.crabstertech.in/#service-${serviceId}`
+    "url": `https://www.crabstertech.in/services/${serviceId}`
   };
 
   return (
@@ -346,7 +346,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
         title={seoData.title}
         description={seoData.description}
         keywords={seoData.keywords}
-        canonicalUrl={`https://www.crabstertech.in/#service-${serviceId}`}
+        canonicalUrl={`https://www.crabstertech.in/services/${serviceId}`}
         image={seoData.image}
         jsonLd={jsonLd}
       />

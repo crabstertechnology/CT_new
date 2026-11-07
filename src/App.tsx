@@ -14,36 +14,46 @@ import Footer from './components/Footer';
 import ServiceDetailPage from './components/ServiceDetailPage';
 
 export default function App() {
-  const [selectedServiceId, setSelectedServiceId] = useState(null);
+  const [selectedServiceId, setSelectedServiceId] = useState<string | null>(null);
 
-  // Handle browser back/forward or hash changes cleanly
+  // Handle browser back/forward, direct path URLs, or hash changes cleanly
   useEffect(() => {
-    const handleHashChange = () => {
+    const parseRoute = () => {
+      const path = window.location.pathname;
       const hash = window.location.hash;
+
+      const pathMatch = path.match(/^\/services\/([a-z0-9_-]+)/i);
+      if (pathMatch) {
+        setSelectedServiceId(pathMatch[1]);
+        return;
+      }
+
       if (hash.startsWith('#service-')) {
         const id = hash.replace('#service-', '');
         setSelectedServiceId(id);
-      } else if (hash === '' || hash === '#') {
-        setSelectedServiceId(null);
+        return;
       }
+
+      setSelectedServiceId(null);
     };
 
-    window.addEventListener('hashchange', handleHashChange);
-    // Check initial hash
-    if (window.location.hash.startsWith('#service-')) {
-      setSelectedServiceId(window.location.hash.replace('#service-', ''));
-    }
+    window.addEventListener('popstate', parseRoute);
+    window.addEventListener('hashchange', parseRoute);
+    parseRoute();
 
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    return () => {
+      window.removeEventListener('popstate', parseRoute);
+      window.removeEventListener('hashchange', parseRoute);
+    };
   }, []);
 
-  const handleSelectService = (id) => {
-    window.location.hash = `service-${id}`;
+  const handleSelectService = (id: string) => {
+    window.history.pushState({}, '', `/services/${id}`);
     setSelectedServiceId(id);
   };
 
   const handleBackToHome = () => {
-    window.location.hash = '';
+    window.history.pushState({}, '', '/');
     setSelectedServiceId(null);
   };
 
@@ -51,10 +61,10 @@ export default function App() {
     handleNavigateSection('contact');
   };
 
-  const handleNavigateSection = (sectionId) => {
+  const handleNavigateSection = (sectionId: string) => {
     if (selectedServiceId) {
       setSelectedServiceId(null);
-      window.location.hash = '';
+      window.history.pushState({}, '', `/#${sectionId}`);
       setTimeout(() => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
       }, 100);
