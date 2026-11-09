@@ -74,7 +74,7 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen ${selectedServiceId ? 'bg-[#070D18] text-white' : 'bg-white text-gray-900'} flex flex-col font-sans selection:bg-[#E87121] selection:text-white w-full overflow-x-hidden transition-colors duration-200`}>
+    <div className="min-h-screen bg-white text-gray-900 flex flex-col font-sans selection:bg-orange-100 selection:text-orange-900 w-full overflow-x-hidden">
       {/* 1. Header Navigation - Full Width Edge to Edge */}
       <Navbar 
         onSelectService={handleSelectService}

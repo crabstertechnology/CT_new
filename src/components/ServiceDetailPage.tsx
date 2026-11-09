@@ -341,7 +341,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
   };
 
   return (
-    <div className="min-h-screen bg-[#070D18] text-white font-sans w-full selection:bg-[#E87121] selection:text-white">
+    <div className="min-h-screen bg-white text-gray-900 font-sans w-full selection:bg-orange-100 selection:text-orange-950">
       <SEO 
         title={seoData.title}
         description={seoData.description}
@@ -352,35 +352,35 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       />
       
       {/* 1. Sub-Header Navigation & Breadcrumbs */}
-      <div className="bg-[#09111E] border-b border-gray-800 text-gray-300 w-full px-6 sm:px-10 lg:px-14 xl:px-20 py-3.5">
+      <div className="bg-white border-b border-gray-200 text-gray-600 w-full px-6 sm:px-10 lg:px-14 xl:px-20 py-3.5">
         <div className="flex items-center justify-between w-full text-xs sm:text-sm">
           <div className="flex items-center gap-2">
             <button
               onClick={onBack}
-              className="inline-flex items-center gap-1.5 font-bold text-gray-300 hover:text-[#E87121] transition-colors cursor-pointer group"
+              className="inline-flex items-center gap-1.5 font-bold text-gray-700 hover:text-[#E87121] transition-colors cursor-pointer group"
             >
               <ArrowLeft className="w-4 h-4 text-[#E87121] transition-transform group-hover:-translate-x-1" />
               <span>All Capabilities</span>
             </button>
-            <span className="text-gray-600">/</span>
-            <span className="text-gray-400 font-medium hidden sm:inline">Services</span>
-            <span className="text-gray-600 hidden sm:inline">/</span>
-            <span className="text-[#E87121] font-semibold">{service.title}</span>
+            <span className="text-gray-300">/</span>
+            <span className="text-gray-500 font-medium hidden sm:inline">Services</span>
+            <span className="text-gray-300 hidden sm:inline">/</span>
+            <span className="text-[#E87121] font-bold">{service.title}</span>
           </div>
 
           <div className="flex items-center gap-3">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span className="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 border border-emerald-500/20">
+            <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 border border-emerald-200">
               Coimbatore Workshop Available
             </span>
           </div>
         </div>
       </div>
 
-      {/* 2. Hero Section: High-Impact Industrial Layout */}
-      <section className="bg-[#09111E] text-white pt-10 pb-16 px-6 sm:px-10 lg:px-14 xl:px-20 border-b border-gray-800 relative overflow-hidden w-full">
-        {/* Ambient Orange Glow */}
-        <div className="absolute top-0 right-0 w-[600px] h-[400px] bg-[#E87121]/15 blur-[140px] pointer-events-none"></div>
+      {/* 2. Hero Section: High-Impact Clean Light White Layout */}
+      <section className="bg-white text-gray-900 pt-10 pb-16 px-6 sm:px-10 lg:px-14 xl:px-20 border-b border-gray-100 relative overflow-hidden w-full">
+        {/* Soft Warm Orange Background Accent */}
+        <div className="absolute top-0 right-0 w-[550px] h-[400px] bg-orange-100/40 blur-[130px] pointer-events-none"></div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center w-full relative z-10">
           
@@ -388,22 +388,22 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
           <div className="lg:col-span-7 xl:col-span-7">
             {/* Category Eyebrow */}
             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#E87121] mb-3">
-              <span className="w-2 h-2 rounded-full bg-[#E87121] animate-ping"></span>
+              <span className="w-2 h-2 rounded-full bg-[#E87121]"></span>
               <span>{service.eyebrow}</span>
             </div>
 
             {/* Main Title */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-black text-white tracking-tight leading-[1.12] mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-gray-950 tracking-tight leading-[1.12] mb-4">
               {service.title}
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-slate-200 font-medium leading-relaxed mb-5">
+            <p className="text-lg sm:text-xl text-gray-700 font-medium leading-relaxed mb-5">
               {service.subtitle}
             </p>
 
             {/* Full Technical Overview */}
-            <p className="text-base text-gray-400 leading-relaxed font-normal mb-8 max-w-2xl">
+            <p className="text-base text-gray-600 leading-relaxed font-normal mb-8 max-w-2xl">
               {service.overview}
             </p>
 
@@ -411,7 +411,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
             <div className="flex flex-wrap items-center gap-4">
               <button
                 onClick={scrollToEnquiry}
-                className="px-7 py-3.5 text-sm sm:text-base font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-lg shadow-orange-500/25 transition-all inline-flex items-center gap-2 cursor-pointer"
+                className="px-7 py-3.5 text-sm sm:text-base font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-md shadow-orange-500/20 transition-all inline-flex items-center gap-2 cursor-pointer"
               >
                 <span>Discuss Floor Requirements</span>
                 <ArrowRight className="w-4 h-4" />
@@ -419,7 +419,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
 
               <a
                 href="tel:+917010396642"
-                className="px-6 py-3.5 text-sm sm:text-base font-semibold text-gray-200 bg-white/5 border border-gray-700 hover:border-[#E87121] hover:text-white hover:bg-[#E87121]/10 rounded-none transition-all inline-flex items-center gap-2"
+                className="px-6 py-3.5 text-sm sm:text-base font-semibold text-gray-800 bg-white border border-gray-300 hover:border-[#E87121] hover:text-[#E87121] rounded-none transition-all inline-flex items-center gap-2 shadow-xs"
               >
                 <Phone className="w-4 h-4 text-[#E87121]" />
                 <span>+91 70103 96642</span>
@@ -429,8 +429,8 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
 
           {/* Right Column: Visual Showcase Card */}
           <div className="lg:col-span-5 xl:col-span-5">
-            <div className="relative overflow-hidden rounded-none shadow-2xl border border-gray-800 bg-[#0F1B30] group">
-              <div className="aspect-[4/3] w-full overflow-hidden">
+            <div className="relative overflow-hidden rounded-none shadow-xl border border-gray-200 bg-white group">
+              <div className="aspect-[4/3] w-full overflow-hidden bg-gray-100">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -439,11 +439,11 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
               </div>
 
               {/* Bottom Card Ribbon */}
-              <div className="p-5 bg-gradient-to-t from-black via-black/95 to-black/80 border-t border-gray-800">
+              <div className="p-5 bg-white border-t border-gray-100">
                 <div className="text-xs uppercase font-bold tracking-wider text-[#E87121] mb-1">
                   Crabster Delivery Guarantee
                 </div>
-                <div className="text-sm font-semibold text-white">
+                <div className="text-sm font-bold text-gray-900">
                   {service.badge}
                 </div>
               </div>
@@ -453,16 +453,16 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
         </div>
 
         {/* Engineering Stats Row */}
-        <div className="mt-14 pt-8 border-t border-gray-800/90 grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
+        <div className="mt-14 pt-8 border-t border-gray-200 grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
           {service.stats.map((st, i) => (
-            <div key={i} className="border-l-2 border-[#E87121] pl-4 bg-white/[0.02] py-2">
-              <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+            <div key={i} className="border-l-2 border-[#E87121] pl-4 bg-orange-50/25 py-2.5">
+              <div className="text-2xl sm:text-3xl font-black text-gray-950 tracking-tight">
                 {st.value}
               </div>
-              <div className="text-xs font-bold text-gray-300 uppercase tracking-wider mt-0.5">
+              <div className="text-xs font-bold text-gray-800 uppercase tracking-wider mt-0.5">
                 {st.label}
               </div>
-              <div className="text-xs text-gray-400 mt-0.5">
+              <div className="text-xs text-gray-500 mt-0.5">
                 {st.sub}
               </div>
             </div>
@@ -471,16 +471,16 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       </section>
 
       {/* 3. Detailed Deliverables Section */}
-      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 border-b border-gray-800/80 bg-[#0B1322] text-white">
+      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 border-b border-gray-200 bg-slate-50/70 text-gray-900">
         <div className="w-full">
           <div className="max-w-3xl mb-10">
             <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2">
               TECHNICAL DELIVERABLES
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-950 tracking-tight">
               What we build, test and commission on your floor
             </h2>
-            <p className="text-base text-slate-400 mt-2 font-normal">
+            <p className="text-base text-gray-600 mt-2 font-normal">
               Every deliverable ends with tangible hardware and code you fully own — with no ongoing licensing locks.
             </p>
           </div>
@@ -490,30 +490,30 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
             {service.deliverables.map((item, idx) => (
               <div 
                 key={idx}
-                className="bg-[#0F1B30] border border-gray-800 rounded-none p-7 sm:p-8 hover:border-[#E87121] hover:shadow-xl hover:shadow-orange-500/10 transition-all flex flex-col justify-between group"
+                className="bg-white border border-gray-200 rounded-none p-7 sm:p-8 hover:border-[#E87121] hover:shadow-lg transition-all flex flex-col justify-between group shadow-xs"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-black text-[#E87121] uppercase tracking-widest bg-orange-500/15 px-2.5 py-1 border border-orange-500/30">
+                    <span className="text-xs font-black text-[#E87121] uppercase tracking-widest bg-orange-50 px-2.5 py-1 border border-orange-200">
                       Deliverable {item.num}
                     </span>
                     <CheckCircle2 className="w-5 h-5 text-[#E87121]" />
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 tracking-tight group-hover:text-[#E87121] transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-950 mb-3 tracking-tight group-hover:text-[#E87121] transition-colors">
                     {item.title}
                   </h3>
 
-                  <p className="text-base text-slate-300 leading-relaxed font-normal mb-5">
+                  <p className="text-base text-gray-600 leading-relaxed font-normal mb-5">
                     {item.desc}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-gray-800/80">
+                <div className="pt-4 border-t border-gray-100">
                   <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
                     Technical Specifications
                   </div>
-                  <div className="text-xs sm:text-sm font-medium text-slate-200">
+                  <div className="text-xs sm:text-sm font-medium text-gray-800">
                     {item.specs}
                   </div>
                 </div>
@@ -525,30 +525,30 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       </section>
 
       {/* 4. Engineering Process Flow */}
-      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-[#070D18] border-b border-gray-800 text-white">
+      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-white border-b border-gray-200 text-gray-900">
         <div className="w-full">
           <div className="max-w-3xl mb-10">
             <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2">
               DELIVERY WORKFLOW
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-950 tracking-tight">
               From requirement walk to signed commissioning
             </h2>
-            <p className="text-base text-slate-400 mt-2 font-normal">
+            <p className="text-base text-gray-600 mt-2 font-normal">
               Structured engineering steps managed by our Coimbatore engineering team.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {service.process.map((pr, i) => (
-              <div key={i} className="bg-[#0F1B30] border border-gray-800/80 p-6 rounded-none relative hover:border-orange-500/40 hover:shadow-lg transition-all group">
-                <div className="text-3xl font-black text-[#E87121]/80 mb-3 group-hover:text-[#E87121] transition-colors">
+              <div key={i} className="bg-slate-50/80 border border-gray-200 p-6 rounded-none relative hover:border-orange-300 hover:bg-white hover:shadow-md transition-all group">
+                <div className="text-3xl font-black text-[#E87121] mb-3">
                   {pr.step}
                 </div>
-                <h4 className="text-lg font-bold text-white mb-2">
+                <h4 className="text-lg font-bold text-gray-950 mb-2">
                   {pr.title}
                 </h4>
-                <p className="text-sm text-slate-300 leading-relaxed">
+                <p className="text-sm text-gray-600 leading-relaxed">
                   {pr.desc}
                 </p>
               </div>
@@ -558,27 +558,27 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       </section>
 
       {/* 5. Target Floor Applications & Tamil Nadu Clusters */}
-      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-[#0B1322] border-b border-gray-800 text-white">
+      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-slate-50/70 border-b border-gray-200 text-gray-900">
         <div className="w-full">
           <div className="max-w-3xl mb-8">
             <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2">
               PROVEN USE CASES
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-950 tracking-tight">
               Where this solution runs across Tamil Nadu
             </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {service.sectors.map((sec, i) => (
-              <div key={i} className="p-6 bg-[#0F1B30] border border-gray-800/90 rounded-none hover:border-[#E87121] hover:shadow-xl hover:shadow-orange-500/10 transition-all">
+              <div key={i} className="p-6 bg-white border border-gray-200 rounded-none hover:border-[#E87121] hover:shadow-md transition-all">
                 <div className="text-xs font-bold text-[#E87121] uppercase tracking-wider mb-2">
                   Sector {i + 1}
                 </div>
-                <h4 className="text-lg font-bold text-white mb-2">
+                <h4 className="text-lg font-bold text-gray-950 mb-2">
                   {sec.name}
                 </h4>
-                <p className="text-sm text-slate-300 leading-relaxed">
+                <p className="text-sm text-gray-600 leading-relaxed">
                   {sec.useCase}
                 </p>
               </div>
@@ -588,7 +588,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       </section>
 
       {/* 6. On-Page Engineering Enquiry & Consultation Form */}
-      <section id="service-enquiry" className="py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-[#070D18] text-white border-b border-gray-800 relative">
+      <section id="service-enquiry" className="py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-white text-gray-900 border-b border-gray-200 relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center w-full">
           
           {/* Left Column: Why Inquire & Guarantees */}
@@ -596,42 +596,42 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
             <div className="text-xs font-bold uppercase tracking-wider text-[#E87121] mb-2">
               START WITH AN AUDIT
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-950 tracking-tight mb-4">
               Get an engineer on your floor in Coimbatore or Tamil Nadu
             </h2>
-            <p className="text-base text-slate-300 leading-relaxed mb-6 font-normal">
+            <p className="text-base text-gray-600 leading-relaxed mb-6 font-normal">
               Share what the machines or process variables are doing today. An engineer will respond within 4 hours to discuss non-invasive measurement or schedule a visit.
             </p>
 
-            <div className="space-y-4 pt-2 border-t border-gray-800/80">
+            <div className="space-y-4 pt-2 border-t border-gray-200">
               <div className="flex items-center gap-3">
                 <ShieldCheck className="w-5 h-5 text-[#E87121] shrink-0" />
                 <div>
-                  <div className="font-semibold text-white text-sm">Non-Disruptive Site Walk</div>
-                  <div className="text-xs text-gray-400">We inspect machines while your plant is running</div>
+                  <div className="font-bold text-gray-900 text-sm">Non-Disruptive Site Walk</div>
+                  <div className="text-xs text-gray-500">We inspect machines while your plant is running</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
                 <FileText className="w-5 h-5 text-[#E87121] shrink-0" />
                 <div>
-                  <div className="font-semibold text-white text-sm">Transparent Itemized Quotation</div>
-                  <div className="text-xs text-gray-400">Clear hardware, labor, and lead time upfront</div>
+                  <div className="font-bold text-gray-900 text-sm">Transparent Itemized Quotation</div>
+                  <div className="text-xs text-gray-500">Clear hardware, labor, and lead time upfront</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-[#E87121] shrink-0" />
                 <div>
-                  <div className="font-semibold text-white text-sm">Engineering Response SLA</div>
-                  <div className="text-xs text-gray-400">Within 4 working hours for Tamil Nadu plants</div>
+                  <div className="font-bold text-gray-900 text-sm">Engineering Response SLA</div>
+                  <div className="text-xs text-gray-500">Within 4 working hours for Tamil Nadu plants</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Clean Sharp Form (High Contrast Crisp White & Orange Card) */}
-          <div className="lg:col-span-7 xl:col-span-7 bg-white text-gray-950 p-8 sm:p-10 rounded-none shadow-2xl border-t-4 border-[#E87121]">
+          {/* Right Column: Clean Sharp Form (Crisp Light Card with Orange Top Accent) */}
+          <div className="lg:col-span-7 xl:col-span-7 bg-slate-50/90 border border-gray-200 p-8 sm:p-10 rounded-none shadow-lg border-t-4 border-[#E87121]">
             {submitted ? (
               <div className="text-center py-8">
                 <div className="w-14 h-14 bg-orange-100 text-[#E87121] flex items-center justify-center mx-auto mb-4 rounded-none">
@@ -676,7 +676,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       disabled={loading}
-                      className="w-full px-4 py-3 text-sm bg-slate-50 border border-gray-300 rounded-none focus:bg-white focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none disabled:opacity-60 transition-all text-gray-900"
+                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none disabled:opacity-60 transition-all text-gray-900"
                     />
                   </div>
                   <div>
@@ -690,7 +690,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       disabled={loading}
-                      className="w-full px-4 py-3 text-sm bg-slate-50 border border-gray-300 rounded-none focus:bg-white focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none disabled:opacity-60 transition-all text-gray-900"
+                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none disabled:opacity-60 transition-all text-gray-900"
                     />
                   </div>
                 </div>
@@ -707,7 +707,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       disabled={loading}
-                      className="w-full px-4 py-3 text-sm bg-slate-50 border border-gray-300 rounded-none focus:bg-white focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none disabled:opacity-60 transition-all text-gray-900"
+                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none disabled:opacity-60 transition-all text-gray-900"
                     />
                   </div>
                   <div>
@@ -721,7 +721,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       disabled={loading}
-                      className="w-full px-4 py-3 text-sm bg-slate-50 border border-gray-300 rounded-none focus:bg-white focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none disabled:opacity-60 transition-all text-gray-900"
+                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none disabled:opacity-60 transition-all text-gray-900"
                     />
                   </div>
                 </div>
@@ -737,7 +737,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     disabled={loading}
-                    className="w-full px-4 py-3 text-sm bg-slate-50 border border-gray-300 rounded-none focus:bg-white focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none resize-none disabled:opacity-60 transition-all text-gray-900"
+                    className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none resize-none disabled:opacity-60 transition-all text-gray-900"
                   ></textarea>
                 </div>
 
@@ -745,7 +745,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full sm:w-auto px-8 py-3.5 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-lg shadow-orange-500/25 transition-all inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="w-full sm:w-auto px-8 py-3.5 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-md shadow-orange-500/20 transition-all inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {loading ? (
                       <>
@@ -768,21 +768,21 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       </section>
 
       {/* 7. Bottom Navigation to Other Capabilities */}
-      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-[#09111E] border-t border-gray-800 text-white">
+      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-slate-50/80 border-t border-gray-200 text-gray-900">
         <div className="w-full">
           <div className="flex items-center justify-between mb-8">
             <div>
               <div className="text-xs font-bold uppercase tracking-wider text-[#E87121] mb-1">
                 OTHER CAPABILITIES
               </div>
-              <h3 className="text-2xl font-black text-white tracking-tight">
+              <h3 className="text-2xl font-black text-gray-950 tracking-tight">
                 Explore our other automation services
               </h3>
             </div>
 
             <button
               onClick={onBack}
-              className="hidden sm:inline-flex items-center gap-2 text-sm font-bold text-gray-300 hover:text-[#E87121] transition-colors cursor-pointer"
+              className="hidden sm:inline-flex items-center gap-2 text-sm font-bold text-gray-700 hover:text-[#E87121] transition-colors cursor-pointer"
             >
               <span>Back to Overview</span>
               <ArrowRight className="w-4 h-4" />
@@ -800,24 +800,24 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                   onClick={() => onNavigateService(s.id)}
                   className={`p-6 rounded-none border text-left transition-all group cursor-pointer ${
                     isCurrent
-                      ? 'border-[#E87121] bg-[#14233D] shadow-xl ring-1 ring-[#E87121]'
-                      : 'border-gray-800 bg-[#0F1B30] hover:border-orange-500/50 hover:bg-[#13223A] hover:shadow-xl hover:shadow-orange-500/10'
+                      ? 'border-[#E87121] bg-white shadow-md ring-1 ring-[#E87121]'
+                      : 'border-gray-200 bg-white hover:border-[#E87121] hover:shadow-md'
                   }`}
                 >
                   <div className="flex items-center justify-between mb-4">
                     <SvcIcon className={`w-6 h-6 ${isCurrent ? 'text-[#E87121]' : 'text-gray-400 group-hover:text-[#E87121]'} transition-colors`} />
                     {isCurrent && (
-                      <span className="text-[10px] uppercase font-bold tracking-widest text-[#E87121] bg-orange-500/15 px-2 py-0.5 border border-orange-500/30">
+                      <span className="text-[10px] uppercase font-bold tracking-widest text-[#E87121] bg-orange-50 px-2 py-0.5 border border-orange-200">
                         Current
                       </span>
                     )}
                   </div>
 
-                  <h4 className={`text-lg font-bold mb-1.5 transition-colors ${isCurrent ? 'text-[#E87121]' : 'text-white group-hover:text-[#E87121]'}`}>
+                  <h4 className={`text-lg font-bold mb-1.5 transition-colors ${isCurrent ? 'text-[#E87121]' : 'text-gray-950 group-hover:text-[#E87121]'}`}>
                     {s.title}
                   </h4>
 
-                  <p className="text-xs sm:text-sm text-slate-400 line-clamp-2">
+                  <p className="text-xs sm:text-sm text-gray-500 line-clamp-2">
                     {s.subtitle}
                   </p>
                 </button>
