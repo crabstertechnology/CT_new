@@ -47,6 +47,20 @@ export default function App() {
     };
   }, []);
 
+  // Send GA4 page_view on SPA route changes
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const win = window as any;
+      if (typeof win.gtag === 'function') {
+        win.gtag('event', 'page_view', {
+          page_path: window.location.pathname,
+          page_location: window.location.href,
+          page_title: document.title
+        });
+      }
+    }
+  }, [selectedServiceId]);
+
   const handleSelectService = (id: string) => {
     window.history.pushState({}, '', `/services/${id}`);
     setSelectedServiceId(id);

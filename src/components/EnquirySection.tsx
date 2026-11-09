@@ -39,6 +39,26 @@ export default function EnquirySection() {
         throw new Error(data.error || 'Failed to submit enquiry. Please try again.');
       }
 
+      // Explicitly trigger GA4 & GTM form_submit event (for SPA AJAX submissions)
+      if (typeof window !== 'undefined') {
+        const win = window as any;
+        if (typeof win.gtag === 'function') {
+          win.gtag('event', 'form_submit', {
+            form_id: 'enquiry_form',
+            form_name: 'Main Floor Modernization Enquiry',
+            form_destination: '/api/enquiry'
+          });
+        }
+        if (Array.isArray(win.dataLayer)) {
+          win.dataLayer.push({
+            event: 'form_submit',
+            form_id: 'enquiry_form',
+            form_name: 'Main Floor Modernization Enquiry',
+            form_destination: '/api/enquiry'
+          });
+        }
+      }
+
       setSubmitted(true);
     } catch (err: any) {
       console.error('Error submitting enquiry:', err);
@@ -94,7 +114,7 @@ export default function EnquirySection() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+              <form id="enquiry_form" name="enquiry_form" onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
                 {errorMessage && (
                   <div className="flex items-start gap-3 bg-red-50 border border-red-200 text-red-800 p-4 text-sm">
                     <AlertCircle className="w-5 h-5 shrink-0 text-red-600 mt-0.5" />

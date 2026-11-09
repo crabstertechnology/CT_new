@@ -299,6 +299,30 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
         throw new Error(data.error || 'Failed to submit requirement');
       }
 
+      // Explicitly trigger GA4 & GTM form_submit event (for SPA AJAX submissions)
+      if (typeof window !== 'undefined') {
+        const win = window as any;
+        if (typeof win.gtag === 'function') {
+          win.gtag('event', 'form_submit', {
+            form_id: `service_enquiry_${service.id}`,
+            form_name: `Service Enquiry: ${service.title}`,
+            form_destination: '/api/enquiry',
+            service_id: service.id,
+            service_title: service.title
+          });
+        }
+        if (Array.isArray(win.dataLayer)) {
+          win.dataLayer.push({
+            event: 'form_submit',
+            form_id: `service_enquiry_${service.id}`,
+            form_name: `Service Enquiry: ${service.title}`,
+            form_destination: '/api/enquiry',
+            service_id: service.id,
+            service_title: service.title
+          });
+        }
+      }
+
       setSubmitted(true);
     } catch (err: any) {
       console.error('Error submitting requirement:', err);
@@ -652,7 +676,12 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form 
+                id={`service_enquiry_${service.id}`}
+                name={`service_enquiry_${service.id}`}
+                onSubmit={handleSubmit} 
+                className="space-y-4"
+              >
                 <div className="text-lg font-bold text-gray-950 mb-2">
                   Send Requirement for <span className="text-[#E87121]">{service.title}</span>
                 </div>
