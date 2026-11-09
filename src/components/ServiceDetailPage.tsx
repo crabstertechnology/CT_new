@@ -120,26 +120,26 @@ const serviceDataMap = {
       },
       {
         num: "03",
-        title: "Workshop Bench-Testing",
-        desc: "100% pre-commissioning simulated under load in our Coimbatore workshop, reducing on-site downtime to hours instead of days.",
-        specs: "I/O point-to-point verification • Motor dry runs • Safety relay sequence testing"
+        title: "Operator HMIs & Safety Relays",
+        desc: "Crisp touch-screen interfaces mounted on IP-rated enclosures with integrated emergency stops and safety interlocks.",
+        specs: "7–10 inch industrial touch panels • Dual-channel E-stops • Safety gate monitoring"
       },
       {
         num: "04",
-        title: "Floor Commissioning & Training",
-        desc: "Our engineers mount, terminate, and commission the board on your shift, training your technicians on fault identification.",
-        specs: "On-site termination • Operator HMI walkthrough • Spare parts recommendations"
+        title: "Bench Testing & On-Site Termination",
+        desc: "Panels arrive pre-configured with numbered terminal blocks, minimizing machine stoppage during changeovers.",
+        specs: "Full I/O bench simulation • Pre-labeled flying leads • Shift-tailored changeover"
       }
     ],
     process: [
-      { step: "01", title: "Line Audit & Load Study", desc: "Measuring motor ratings, duty cycles, and floor space constraints." },
-      { step: "02", title: "CAD Schematic Design", desc: "Full electrical drafting with component approvals from your team." },
-      { step: "03", title: "Workshop Build & Bench Test", desc: "Neat routing, ferruled terminations, and complete simulated load test." },
-      { step: "04", title: "Floor Mounting & Handover", desc: "Installed, terminated, live-tested, and documentation handed over." }
+      { step: "01", title: "Electrical Load & I/O Audit", desc: "Cataloging motor ratings, sensor counts, and field devices." },
+      { step: "02", title: "CAD Schematic Drafting", desc: "Designing power distribution, PLC I/O, and thermal management." },
+      { step: "03", title: "Shop Assembly & Testing", desc: "Precision wiring, ferrule labeling, and simulated sequence testing." },
+      { step: "04", title: "Floor Mounting & Handoff", desc: "Mounting, terminating, and fine-tuning machine operation." }
     ],
     sectors: [
-      { name: "OEM Machine Builders", useCase: "Turnkey control panels built to repeatable machine specifications" },
-      { name: "Textile Processing & Dyeing", useCase: "IP-rated stainless panels with temperature and valve logic" },
+      { name: "Pumps & Valve Manufacturing", useCase: "Automated hydrostatic pressure test-benches & endurance logging" },
+      { name: "Paper & Packaging Lines", useCase: "Synchronized servo unwinding, cutting & tension control" },
       { name: "Foundries & Casting", useCase: "Heavy-duty dust-sealed motor control centers and VFD panels" },
       { name: "Food & Beverage Packaging", useCase: "Sanitary stainless enclosures with high-speed indexing PLC" }
     ]
@@ -163,38 +163,38 @@ const serviceDataMap = {
     deliverables: [
       {
         num: "01",
-        title: "Closed-Loop PID Regulation",
-        desc: "Self-correcting feedback loops for temperature, pressure, level, and flow that maintain target setpoints regardless of ambient drift.",
-        specs: "Autotuned PID algorithms • SSR / SCR power controllers • Modulating valves"
+        title: "PID Loops & Temperature Profiling",
+        desc: "Closed-loop regulation for heaters, steam valves, and cooling jackets with automated ramp/soak curves and over-temperature safety cutoffs.",
+        specs: "Multi-loop PID controllers • SSR / SCR power packs • RTD / Thermocouple inputs"
       },
       {
         num: "02",
-        title: "Recipe Management Systems",
-        desc: "One-touch recipe recalls on operator touchscreens (HMI) ensuring consistent parameters shift after shift.",
-        specs: "Multi-step temperature ramp-and-soak • Password-protected parameter editing"
+        title: "Automated Valve Sequencing & CIP",
+        desc: "Pneumatic and motorized valve manifolds programmed for clean-in-place cycles, automatic filling, and multi-tank transfers.",
+        specs: "Pneumatic solenoid banks • Sanitary butterfly valves • Flowmeter pulse integration"
       },
       {
         num: "03",
-        title: "Pneumatic & Actuated Valve Sequencing",
-        desc: "Automated valve manifolds and safety interlocking to prevent cross-contamination and catastrophic over-pressure events.",
-        specs: "Pneumatic solenoid racks • Limit-switch position feedback • Safety interlocks"
+        title: "Recipe Management on HMI",
+        desc: "Enable operators to select predefined mix recipes with locked parameter boundaries, preventing unauthorized floor adjustments.",
+        specs: "Multi-level password control • Batch ingredient checkpoints • USB / Cloud recipe backup"
       },
       {
         num: "04",
-        title: "Audit & Compliance Logging",
-        desc: "Time-stamped historical process records stored locally for customer compliance, audit inspection, and QA tracking.",
-        specs: "CSV data export via USB • Hourly trend charts • Alarm history logs"
+        title: "Continuous Process Trend Logging",
+        desc: "Exportable CSV and PDF reports recording batch parameters, hold durations, and deviations for customer audits and compliance.",
+        specs: "Automated shift batch reports • Deviation alerts • Historical chart replays"
       }
     ],
     process: [
-      { step: "01", title: "Thermal & Flow Analysis", desc: "Assessing tank volumes, thermal lag, and valve actuation points." },
-      { step: "02", title: "Instrument Specification", desc: "Selecting industrial RTDs, pressure transmitters, and control valves." },
-      { step: "03", title: "Controller Programming", desc: "Coding PID loops, safety bounds, and touch HMI recipe screens." },
-      { step: "04", title: "Water / Live Material Tuning", desc: "Tuning PID parameters under actual operating conditions." }
+      { step: "01", title: "Thermal & Flow Survey", desc: "Measuring baseline process swings, pipe diameters, and valve travel times." },
+      { step: "02", title: "Actuator & Sensor Sizing", desc: "Selecting proportional valves, RTDs, and flow transmitters." },
+      { step: "03", title: "PLC Loop Programming", desc: "Tuning PID parameters for rapid rise without overshoot." },
+      { step: "04", title: "Batch Trial & Sign-Off", desc: "Running test batches with your raw materials until consistency is locked." }
     ],
     sectors: [
-      { name: "Textile Dyeing & Yarn Finishing", useCase: "Automated liquor ratio, bath temperature ramping & drain sequences" },
-      { name: "Chemical & Adhesive Processing", useCase: "Exothermic reaction temperature control & dosing valve automation" },
+      { name: "Textile Dyeing & Wet Processing", useCase: "Bath temperature ramp/soak, pH regulation & dosing automation" },
+      { name: "Chemical & Resin Blending", useCase: "Exothermic reaction temperature control & automated solvent feeds" },
       { name: "Rubber Vulcanization", useCase: "Platen steam pressure regulation, cure timers & automated degas" },
       { name: "Food & Dairy Processing", useCase: "Pasteurization holding times, CIP sequencing & tank level control" }
     ]
@@ -218,33 +218,33 @@ const serviceDataMap = {
     deliverables: [
       {
         num: "01",
-        title: "Part Feeding & Pick-and-Place",
-        desc: "Pneumatic and motorized indexers that load and eject components automatically, keeping machine uptime constant.",
-        specs: "Pneumatic rodless cylinders • Vacuum grippers • Linear guide rails"
+        title: "Automated Part Feeding & Pick-and-Place",
+        desc: "Pneumatic indexers, linear slides, and bowl feeder gates that feed raw components into tooling stations without manual operator handling.",
+        specs: "Festo / SMC pneumatics • Vacuum suction grippers • Opto-electronic part presence"
       },
       {
         num: "02",
-        title: "Defect Detection & Rejection",
-        desc: "Proximity, optical, and vision sensors that detect missing components or dimensions and reject faulty parts immediately.",
-        specs: "Fiber-optic presence sensors • Auto-rejection air blast • Reject bin verification"
+        title: "Dual-Hand Safety & Optical Light Curtains",
+        desc: "Safety interlocks that protect operator fingers without slowing down fast repetitive press or tooling operations.",
+        specs: "Type 4 safety light curtains • Dual-channel safety relays • Anti-tie-down dual pushbuttons"
       },
       {
         num: "03",
-        title: "Pushbutton to PLC Upgrades",
-        desc: "Modernizing manual levers and foot-pedals into synchronized automated cycles with dual-hand safety interlocks.",
-        specs: "Optical light curtains • Safety relays • Multi-mode operator selector"
+        title: "Cam-to-Servo Electronic Synchronization",
+        desc: "Replacing mechanical linkages and gearboxes with high-precision servo drives that allow push-button length and speed changeovers.",
+        specs: "Absolute encoder feedback • High-torque servos • Programmable electronic cams"
       },
       {
         num: "04",
-        title: "Conveyor Synchronization",
-        desc: "Line tracking and speed matching between consecutive workstations to eliminate floor accumulation bottlenecks.",
-        specs: "VFD speed tracking • Optical queue sensors • Indexing stopper gates"
+        title: "Automated Ejection & Pass/Fail Sorting",
+        desc: "Sensor gates and air-blast ejectors that automatically segregate out-of-spec parts before they enter the finished batch bins.",
+        specs: "High-speed air blast nozzles • Reject divert flappers • Batch count bin indexing"
       }
     ],
     process: [
-      { step: "01", title: "Motion & Cycle Study", desc: "Timing operator movements and identifying manual bottlenecks on the line." },
-      { step: "02", title: "Mechanical CAD & Brackets", desc: "Designing custom mounting brackets that bolt to existing machine frames." },
-      { step: "03", title: "Electrical & Pneumatic Assembly", desc: "Pre-wiring control box and manifold assemblies in Coimbatore." },
+      { step: "01", title: "Motion & Cycle Study", desc: "Timing each manual movement on video to pinpoint cycle lag." },
+      { step: "02", title: "Mechanical Bracket Pre-Fab", desc: "Machining mounting plates and sensor jigs in advance." },
+      { step: "03", title: "Pneumatics & Controller Wiring", desc: "Fitting cylinders, valves, and compact PLC control." },
       { step: "04", title: "Floor Retrofit & Shift Handover", desc: "Bolting hardware, testing cycle interlocks, and training floor operators." }
     ],
     sectors: [
@@ -341,7 +341,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans w-full">
+    <div className="min-h-screen bg-[#070D18] text-white font-sans w-full selection:bg-[#E87121] selection:text-white">
       <SEO 
         title={seoData.title}
         description={seoData.description}
@@ -370,7 +370,9 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
 
           <div className="flex items-center gap-3">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span className="text-xs font-semibold text-gray-300">Coimbatore Workshop Available</span>
+            <span className="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 border border-emerald-500/20">
+              Coimbatore Workshop Available
+            </span>
           </div>
         </div>
       </div>
@@ -378,7 +380,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       {/* 2. Hero Section: High-Impact Industrial Layout */}
       <section className="bg-[#09111E] text-white pt-10 pb-16 px-6 sm:px-10 lg:px-14 xl:px-20 border-b border-gray-800 relative overflow-hidden w-full">
         {/* Ambient Orange Glow */}
-        <div className="absolute top-0 right-0 w-[600px] h-[400px] bg-[#E87121]/10 blur-[130px] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[400px] bg-[#E87121]/15 blur-[140px] pointer-events-none"></div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center w-full relative z-10">
           
@@ -386,7 +388,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
           <div className="lg:col-span-7 xl:col-span-7">
             {/* Category Eyebrow */}
             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#E87121] mb-3">
-              <span className="w-2 h-2 rounded-full bg-[#E87121]"></span>
+              <span className="w-2 h-2 rounded-full bg-[#E87121] animate-ping"></span>
               <span>{service.eyebrow}</span>
             </div>
 
@@ -396,7 +398,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-slate-300 font-medium leading-relaxed mb-5">
+            <p className="text-lg sm:text-xl text-slate-200 font-medium leading-relaxed mb-5">
               {service.subtitle}
             </p>
 
@@ -409,7 +411,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
             <div className="flex flex-wrap items-center gap-4">
               <button
                 onClick={scrollToEnquiry}
-                className="px-7 py-3.5 text-sm sm:text-base font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-md shadow-orange-500/20 transition-all inline-flex items-center gap-2 cursor-pointer"
+                className="px-7 py-3.5 text-sm sm:text-base font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-lg shadow-orange-500/25 transition-all inline-flex items-center gap-2 cursor-pointer"
               >
                 <span>Discuss Floor Requirements</span>
                 <ArrowRight className="w-4 h-4" />
@@ -417,7 +419,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
 
               <a
                 href="tel:+917010396642"
-                className="px-6 py-3.5 text-sm sm:text-base font-semibold text-gray-200 bg-white/5 border border-gray-700 hover:border-[#E87121] hover:text-white rounded-none transition-all inline-flex items-center gap-2"
+                className="px-6 py-3.5 text-sm sm:text-base font-semibold text-gray-200 bg-white/5 border border-gray-700 hover:border-[#E87121] hover:text-white hover:bg-[#E87121]/10 rounded-none transition-all inline-flex items-center gap-2"
               >
                 <Phone className="w-4 h-4 text-[#E87121]" />
                 <span>+91 70103 96642</span>
@@ -427,7 +429,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
 
           {/* Right Column: Visual Showcase Card */}
           <div className="lg:col-span-5 xl:col-span-5">
-            <div className="relative overflow-hidden rounded-none shadow-2xl border border-gray-800 bg-gray-900 group">
+            <div className="relative overflow-hidden rounded-none shadow-2xl border border-gray-800 bg-[#0F1B30] group">
               <div className="aspect-[4/3] w-full overflow-hidden">
                 <img
                   src={service.image}
@@ -441,7 +443,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                 <div className="text-xs uppercase font-bold tracking-wider text-[#E87121] mb-1">
                   Crabster Delivery Guarantee
                 </div>
-                <div className="text-sm font-semibold text-gray-200">
+                <div className="text-sm font-semibold text-white">
                   {service.badge}
                 </div>
               </div>
@@ -453,14 +455,14 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
         {/* Engineering Stats Row */}
         <div className="mt-14 pt-8 border-t border-gray-800/90 grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
           {service.stats.map((st, i) => (
-            <div key={i} className="border-l-2 border-[#E87121] pl-4">
+            <div key={i} className="border-l-2 border-[#E87121] pl-4 bg-white/[0.02] py-2">
               <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                 {st.value}
               </div>
               <div className="text-xs font-bold text-gray-300 uppercase tracking-wider mt-0.5">
                 {st.label}
               </div>
-              <div className="text-xs text-gray-500 mt-0.5">
+              <div className="text-xs text-gray-400 mt-0.5">
                 {st.sub}
               </div>
             </div>
@@ -469,16 +471,16 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       </section>
 
       {/* 3. Detailed Deliverables Section */}
-      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 border-b border-gray-100 bg-white">
+      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 border-b border-gray-800/80 bg-[#0B1322] text-white">
         <div className="w-full">
           <div className="max-w-3xl mb-10">
             <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2">
               TECHNICAL DELIVERABLES
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-950 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
               What we build, test and commission on your floor
             </h2>
-            <p className="text-base text-gray-600 mt-2 font-normal">
+            <p className="text-base text-slate-400 mt-2 font-normal">
               Every deliverable ends with tangible hardware and code you fully own — with no ongoing licensing locks.
             </p>
           </div>
@@ -488,30 +490,30 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
             {service.deliverables.map((item, idx) => (
               <div 
                 key={idx}
-                className="bg-white border border-gray-200 rounded-none p-7 sm:p-8 hover:border-orange-300 hover:shadow-md transition-all flex flex-col justify-between group"
+                className="bg-[#0F1B30] border border-gray-800 rounded-none p-7 sm:p-8 hover:border-[#E87121] hover:shadow-xl hover:shadow-orange-500/10 transition-all flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-black text-[#E87121] uppercase tracking-widest bg-orange-50 px-2.5 py-1 border border-orange-200">
+                    <span className="text-xs font-black text-[#E87121] uppercase tracking-widest bg-orange-500/15 px-2.5 py-1 border border-orange-500/30">
                       Deliverable {item.num}
                     </span>
                     <CheckCircle2 className="w-5 h-5 text-[#E87121]" />
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-950 mb-3 tracking-tight group-hover:text-[#E87121] transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 tracking-tight group-hover:text-[#E87121] transition-colors">
                     {item.title}
                   </h3>
 
-                  <p className="text-base text-gray-600 leading-relaxed font-normal mb-5">
+                  <p className="text-base text-slate-300 leading-relaxed font-normal mb-5">
                     {item.desc}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-gray-100">
+                <div className="pt-4 border-t border-gray-800/80">
                   <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
                     Technical Specifications
                   </div>
-                  <div className="text-xs sm:text-sm font-medium text-gray-700">
+                  <div className="text-xs sm:text-sm font-medium text-slate-200">
                     {item.specs}
                   </div>
                 </div>
@@ -523,30 +525,30 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       </section>
 
       {/* 4. Engineering Process Flow */}
-      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-slate-50/70 border-b border-gray-100">
+      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-[#070D18] border-b border-gray-800 text-white">
         <div className="w-full">
           <div className="max-w-3xl mb-10">
             <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2">
               DELIVERY WORKFLOW
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-950 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
               From requirement walk to signed commissioning
             </h2>
-            <p className="text-base text-gray-600 mt-2 font-normal">
+            <p className="text-base text-slate-400 mt-2 font-normal">
               Structured engineering steps managed by our Coimbatore engineering team.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {service.process.map((pr, i) => (
-              <div key={i} className="bg-white border border-gray-200 p-6 rounded-none relative">
-                <div className="text-3xl font-black text-orange-200 mb-3">
+              <div key={i} className="bg-[#0F1B30] border border-gray-800/80 p-6 rounded-none relative hover:border-orange-500/40 hover:shadow-lg transition-all group">
+                <div className="text-3xl font-black text-[#E87121]/80 mb-3 group-hover:text-[#E87121] transition-colors">
                   {pr.step}
                 </div>
-                <h4 className="text-lg font-bold text-gray-950 mb-2">
+                <h4 className="text-lg font-bold text-white mb-2">
                   {pr.title}
                 </h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-slate-300 leading-relaxed">
                   {pr.desc}
                 </p>
               </div>
@@ -556,27 +558,27 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       </section>
 
       {/* 5. Target Floor Applications & Tamil Nadu Clusters */}
-      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-white border-b border-gray-100">
+      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-[#0B1322] border-b border-gray-800 text-white">
         <div className="w-full">
           <div className="max-w-3xl mb-8">
             <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2">
               PROVEN USE CASES
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-950 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
               Where this solution runs across Tamil Nadu
             </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {service.sectors.map((sec, i) => (
-              <div key={i} className="p-6 bg-slate-50 border border-gray-200 rounded-none hover:border-[#E87121] transition-all">
+              <div key={i} className="p-6 bg-[#0F1B30] border border-gray-800/90 rounded-none hover:border-[#E87121] hover:shadow-xl hover:shadow-orange-500/10 transition-all">
                 <div className="text-xs font-bold text-[#E87121] uppercase tracking-wider mb-2">
                   Sector {i + 1}
                 </div>
-                <h4 className="text-lg font-bold text-gray-950 mb-2">
+                <h4 className="text-lg font-bold text-white mb-2">
                   {sec.name}
                 </h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-slate-300 leading-relaxed">
                   {sec.useCase}
                 </p>
               </div>
@@ -586,60 +588,58 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       </section>
 
       {/* 6. On-Page Engineering Enquiry & Consultation Form */}
-      <section id="service-enquiry" className="py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-slate-900 text-white border-b border-gray-800">
+      <section id="service-enquiry" className="py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-[#070D18] text-white border-b border-gray-800 relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center w-full">
           
-          {/* Left Column: Direct Consultation Contact Context */}
+          {/* Left Column: Why Inquire & Guarantees */}
           <div className="lg:col-span-5 xl:col-span-5">
-            <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E87121] mb-2">
-              START A CONVERSATION
+            <div className="text-xs font-bold uppercase tracking-wider text-[#E87121] mb-2">
+              START WITH AN AUDIT
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4">
-              Discuss this with an engineer in Coimbatore
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4">
+              Get an engineer on your floor in Coimbatore or Tamil Nadu
             </h2>
-            <p className="text-base text-gray-400 leading-relaxed mb-6">
-              Share the machine make, line bottleneck, or what you want to achieve. A Crabster engineer will review and respond with specific technical advice.
+            <p className="text-base text-slate-300 leading-relaxed mb-6 font-normal">
+              Share what the machines or process variables are doing today. An engineer will respond within 4 hours to discuss non-invasive measurement or schedule a visit.
             </p>
 
-            <div className="space-y-4 pt-2 text-sm text-gray-300">
+            <div className="space-y-4 pt-2 border-t border-gray-800/80">
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#E87121] shrink-0" />
+                <ShieldCheck className="w-5 h-5 text-[#E87121] shrink-0" />
                 <div>
-                  <div className="text-xs text-gray-400">Direct Engineer Line</div>
-                  <a href="tel:+917010396642" className="text-base font-bold text-white hover:text-[#E87121]">
-                    +91 70103 96642
-                  </a>
+                  <div className="font-semibold text-white text-sm">Non-Disruptive Site Walk</div>
+                  <div className="text-xs text-gray-400">We inspect machines while your plant is running</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-[#E87121] shrink-0" />
+                <FileText className="w-5 h-5 text-[#E87121] shrink-0" />
                 <div>
-                  <div className="text-xs text-gray-400">Workshop &amp; Engineering Office</div>
-                  <div className="font-medium text-white">Veerapandi, Coimbatore – 641019, Tamil Nadu</div>
+                  <div className="font-semibold text-white text-sm">Transparent Itemized Quotation</div>
+                  <div className="text-xs text-gray-400">Clear hardware, labor, and lead time upfront</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-[#E87121] shrink-0" />
                 <div>
-                  <div className="text-xs text-gray-400">Engineering Response SLA</div>
-                  <div className="font-medium text-white">Within 4 working hours for Tamil Nadu plants</div>
+                  <div className="font-semibold text-white text-sm">Engineering Response SLA</div>
+                  <div className="text-xs text-gray-400">Within 4 working hours for Tamil Nadu plants</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Clean Sharp Form */}
-          <div className="lg:col-span-7 xl:col-span-7 bg-white text-gray-900 p-8 sm:p-10 rounded-none shadow-2xl">
+          {/* Right Column: Clean Sharp Form (High Contrast Crisp White & Orange Card) */}
+          <div className="lg:col-span-7 xl:col-span-7 bg-white text-gray-950 p-8 sm:p-10 rounded-none shadow-2xl border-t-4 border-[#E87121]">
             {submitted ? (
               <div className="text-center py-8">
-                <div className="w-14 h-14 bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4 rounded-none">
+                <div className="w-14 h-14 bg-orange-100 text-[#E87121] flex items-center justify-center mx-auto mb-4 rounded-none">
                   <Check className="w-8 h-8 stroke-[2.5]" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-950 mb-2">Requirement Received</h3>
                 <p className="text-base text-gray-600 max-w-md mx-auto mb-6">
-                  Thank you! We have received your query for <span className="font-bold text-[#E87121]">{service.title}</span>. An engineer will reach out to you directly.
+                  Thank you! We have received your query for <span className="font-bold text-[#E87121]">{service.title}</span>. An engineer will reach out to you directly at <span className="font-semibold text-gray-900">{formData.email}</span>.
                 </p>
                 <button
                   onClick={() => {
@@ -654,7 +654,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="text-lg font-bold text-gray-950 mb-2">
-                  Send Requirement for {service.title}
+                  Send Requirement for <span className="text-[#E87121]">{service.title}</span>
                 </div>
 
                 {errorMessage && (
@@ -676,7 +676,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       disabled={loading}
-                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none disabled:opacity-60"
+                      className="w-full px-4 py-3 text-sm bg-slate-50 border border-gray-300 rounded-none focus:bg-white focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none disabled:opacity-60 transition-all text-gray-900"
                     />
                   </div>
                   <div>
@@ -690,7 +690,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       disabled={loading}
-                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none disabled:opacity-60"
+                      className="w-full px-4 py-3 text-sm bg-slate-50 border border-gray-300 rounded-none focus:bg-white focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none disabled:opacity-60 transition-all text-gray-900"
                     />
                   </div>
                 </div>
@@ -707,7 +707,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       disabled={loading}
-                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none disabled:opacity-60"
+                      className="w-full px-4 py-3 text-sm bg-slate-50 border border-gray-300 rounded-none focus:bg-white focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none disabled:opacity-60 transition-all text-gray-900"
                     />
                   </div>
                   <div>
@@ -721,7 +721,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       disabled={loading}
-                      className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none disabled:opacity-60"
+                      className="w-full px-4 py-3 text-sm bg-slate-50 border border-gray-300 rounded-none focus:bg-white focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none disabled:opacity-60 transition-all text-gray-900"
                     />
                   </div>
                 </div>
@@ -737,7 +737,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     disabled={loading}
-                    className="w-full px-4 py-3 text-sm bg-white border border-gray-300 rounded-none focus:border-[#E87121] focus:ring-1 focus:ring-[#E87121] outline-none resize-none disabled:opacity-60"
+                    className="w-full px-4 py-3 text-sm bg-slate-50 border border-gray-300 rounded-none focus:bg-white focus:border-[#E87121] focus:ring-2 focus:ring-orange-500/20 outline-none resize-none disabled:opacity-60 transition-all text-gray-900"
                   ></textarea>
                 </div>
 
@@ -745,7 +745,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full sm:w-auto px-8 py-3.5 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-md shadow-orange-500/20 transition-all inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="w-full sm:w-auto px-8 py-3.5 text-sm font-bold text-white bg-[#E87121] hover:bg-[#D45E12] active:scale-[0.98] rounded-none shadow-lg shadow-orange-500/25 transition-all inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {loading ? (
                       <>
@@ -768,21 +768,21 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       </section>
 
       {/* 7. Bottom Navigation to Other Capabilities */}
-      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-slate-50 border-t border-gray-100">
+      <section className="py-14 sm:py-16 px-6 sm:px-10 lg:px-14 xl:px-20 bg-[#09111E] border-t border-gray-800 text-white">
         <div className="w-full">
           <div className="flex items-center justify-between mb-8">
             <div>
               <div className="text-xs font-bold uppercase tracking-wider text-[#E87121] mb-1">
                 OTHER CAPABILITIES
               </div>
-              <h3 className="text-2xl font-black text-gray-950 tracking-tight">
+              <h3 className="text-2xl font-black text-white tracking-tight">
                 Explore our other automation services
               </h3>
             </div>
 
             <button
               onClick={onBack}
-              className="hidden sm:inline-flex items-center gap-2 text-sm font-bold text-gray-700 hover:text-[#E87121] transition-colors"
+              className="hidden sm:inline-flex items-center gap-2 text-sm font-bold text-gray-300 hover:text-[#E87121] transition-colors cursor-pointer"
             >
               <span>Back to Overview</span>
               <ArrowRight className="w-4 h-4" />
@@ -800,24 +800,24 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                   onClick={() => onNavigateService(s.id)}
                   className={`p-6 rounded-none border text-left transition-all group cursor-pointer ${
                     isCurrent
-                      ? 'border-[#E87121] bg-white shadow-md ring-1 ring-[#E87121]'
-                      : 'border-gray-200 bg-white hover:border-orange-300 hover:shadow-xs'
+                      ? 'border-[#E87121] bg-[#14233D] shadow-xl ring-1 ring-[#E87121]'
+                      : 'border-gray-800 bg-[#0F1B30] hover:border-orange-500/50 hover:bg-[#13223A] hover:shadow-xl hover:shadow-orange-500/10'
                   }`}
                 >
                   <div className="flex items-center justify-between mb-4">
                     <SvcIcon className={`w-6 h-6 ${isCurrent ? 'text-[#E87121]' : 'text-gray-400 group-hover:text-[#E87121]'} transition-colors`} />
                     {isCurrent && (
-                      <span className="text-[10px] uppercase font-bold tracking-widest text-[#E87121] bg-orange-50 px-2 py-0.5 border border-orange-200">
+                      <span className="text-[10px] uppercase font-bold tracking-widest text-[#E87121] bg-orange-500/15 px-2 py-0.5 border border-orange-500/30">
                         Current
                       </span>
                     )}
                   </div>
 
-                  <h4 className={`text-lg font-bold mb-1.5 transition-colors ${isCurrent ? 'text-[#E87121]' : 'text-gray-950 group-hover:text-[#E87121]'}`}>
+                  <h4 className={`text-lg font-bold mb-1.5 transition-colors ${isCurrent ? 'text-[#E87121]' : 'text-white group-hover:text-[#E87121]'}`}>
                     {s.title}
                   </h4>
 
-                  <p className="text-xs sm:text-sm text-gray-500 line-clamp-2">
+                  <p className="text-xs sm:text-sm text-slate-400 line-clamp-2">
                     {s.subtitle}
                   </p>
                 </button>
