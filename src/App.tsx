@@ -166,7 +166,10 @@ export default function App() {
                   "name": "Detach",
                   "image": "https://detach.crabstertech.in/assets/detach_hero_4k.webp",
                   "description": "Anti-Distraction Pocket Companion Hardware by Crabster Technology.",
-                  "brand": { "@id": "https://www.crabstertech.in/#organization" },
+                  "brand": {
+                    "@type": "Brand",
+                    "name": "Crabster Technology"
+                  },
                   "url": "https://detach.crabstertech.in",
                   "offers": {
                     "@type": "Offer",
