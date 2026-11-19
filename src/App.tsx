@@ -96,8 +96,8 @@ export default function App() {
         onGoToContact={handleGoToContact}
       />
 
-      {/* Fixed Navbar Spacer (Accounting for Detach Announcement Banner + Navbar) */}
-      <div className="h-[116px] shrink-0" aria-hidden="true" />
+      {/* Fixed Navbar Spacer */}
+      <div className="h-20 shrink-0" aria-hidden="true" />
 
       {/* Main Content Router without Popups */}
       {selectedServiceId ? (

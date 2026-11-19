@@ -31,26 +31,7 @@ export default function Navbar({ onSelectService, onNavigateSection, onGoToConta
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/40 shadow-xs transition-all w-full">
-      {/* Detach Announcement Banner */}
-      <aside className="w-full bg-[#07070a] border-b border-[#3875ff]/30 text-white text-xs sm:text-sm py-2 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 text-center flex-wrap sm:flex-nowrap">
-          <span className="inline-block px-2 py-0.5 text-[10px] font-bold tracking-wider uppercase bg-[#3875ff]/20 text-[#3875ff] rounded-full border border-[#3875ff]/40">
-            New Hardware
-          </span>
-          <span className="text-gray-300">
-            Introducing <strong>Detach</strong>: Our Anti-Distraction Pocket Companion.
-          </span>
-          <a
-            href="https://detach.crabstertech.in"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center text-[#3875ff] hover:text-white font-medium underline underline-offset-4 ml-1 transition-colors"
-          >
-            Learn more &rarr;
-          </a>
-        </div>
-      </aside>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-md border-b border-gray-200/40 shadow-xs transition-all w-full">
 
       {/* Maximum width edge-to-edge padding */}
       <div className="w-full px-6 sm:px-10 lg:px-14 xl:px-20">
@@ -139,18 +120,6 @@ export default function Navbar({ onSelectService, onNavigateSection, onGoToConta
             >
               Contact
             </a>
-
-            <a 
-              href="https://detach.crabstertech.in" 
-              target="_blank" 
-              rel="noopener"
-              className="text-[#3875ff] hover:text-[#285cd9] transition-colors inline-flex items-center gap-1.5 font-semibold"
-            >
-              <span>Detach</span>
-              <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-[#3875ff]/15 text-[#3875ff] font-bold border border-[#3875ff]/30">
-                Hardware
-              </span>
-            </a>
           </nav>
 
           {/* Mobile Menu Button - Sharp */}
@@ -204,17 +173,6 @@ export default function Navbar({ onSelectService, onNavigateSection, onGoToConta
               className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-orange-50 rounded-none"
             >
               Contact
-            </a>
-            <a
-              href="https://detach.crabstertech.in"
-              target="_blank"
-              rel="noopener"
-              className="px-3 py-2 text-sm font-semibold text-[#3875ff] hover:bg-blue-50/60 rounded-none flex items-center justify-between"
-            >
-              <span>Detach (Anti-Distraction Hardware)</span>
-              <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#3875ff]/15 text-[#3875ff] font-bold">
-                NEW
-              </span>
             </a>
             <div className="pt-2">
               <button
