@@ -67,6 +67,12 @@ export default function Footer({ onSelectService, onNavigateSection, onOpenConta
                   shop.crabstertech.in <ExternalLink className="w-3 h-3 text-gray-500" />
                 </a>
               </div>
+              <div className="flex items-center gap-2.5 text-gray-300">
+                <Globe className="w-4 h-4 text-[#3875ff] shrink-0" />
+                <a href="https://detach.crabstertech.in" target="_blank" rel="noopener" className="hover:text-white transition-colors inline-flex items-center gap-1">
+                  detach.crabstertech.in <ExternalLink className="w-3 h-3 text-gray-500" />
+                </a>
+              </div>
             </div>
 
             {/* Social Media Links */}
@@ -155,6 +161,18 @@ export default function Footer({ onSelectService, onNavigateSection, onOpenConta
                 Company &amp; Portals
               </h4>
               <ul className="space-y-2.5 text-sm sm:text-base text-gray-400">
+                <li>
+                  <a 
+                    href="https://detach.crabstertech.in" 
+                    target="_blank" 
+                    rel="noopener" 
+                    className="hover:text-[#3875ff] transition-colors flex items-center gap-1.5 text-gray-200 font-medium group"
+                  >
+                    <span>Detach — Digital Wellbeing Hardware</span>
+                    <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-[#3875ff]/20 text-[#3875ff] border border-[#3875ff]/30">New</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-[#3875ff] transition-transform group-hover:translate-x-0.5" />
+                  </a>
+                </li>
                 <li>
                   <a href="https://shop.crabstertech.in/" target="_blank" rel="noopener noreferrer" className="hover:text-[#E87121] transition-colors flex items-center gap-1.5">
                     Crabster Store <ExternalLink className="w-3.5 h-3.5 text-gray-500" />

@@ -96,8 +96,8 @@ export default function App() {
         onGoToContact={handleGoToContact}
       />
 
-      {/* Fixed Navbar Spacer */}
-      <div className="h-20 shrink-0" aria-hidden="true" />
+      {/* Fixed Navbar Spacer (Accounting for Detach Announcement Banner + Navbar) */}
+      <div className="h-[116px] shrink-0" aria-hidden="true" />
 
       {/* Main Content Router without Popups */}
       {selectedServiceId ? (
@@ -159,6 +159,14 @@ export default function App() {
                   "url": "https://www.crabstertech.in",
                   "name": "Crabster Technology",
                   "publisher": { "@id": "https://www.crabstertech.in/#organization" }
+                },
+                {
+                  "@type": "Product",
+                  "@id": "https://detach.crabstertech.in/#product",
+                  "name": "Detach",
+                  "brand": { "@id": "https://www.crabstertech.in/#organization" },
+                  "description": "Anti-Distraction Pocket Companion Hardware by Crabster Technology.",
+                  "url": "https://detach.crabstertech.in"
                 }
               ]
             }}
