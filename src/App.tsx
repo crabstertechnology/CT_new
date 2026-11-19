@@ -129,7 +129,7 @@ export default function App() {
                   "image": "https://www.crabstertech.in/assets/control-panel-hd.jpg",
                   "description": "Crabster Technology designs and builds Industrial IoT, custom automation panel boards, and machine control retrofits for manufacturers across Tamil Nadu, India.",
                   "email": "crabstertech@gmail.com",
-                  "telephone": "+91 98765 43210",
+                  "telephone": "+91 70103 96642",
                   "address": {
                     "@type": "PostalAddress",
                     "addressLocality": "Coimbatore",

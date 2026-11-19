@@ -348,7 +348,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
       "@type": "LocalBusiness",
       "name": "Crabster Technology",
       "url": "https://www.crabstertech.in",
-      "telephone": "+91 98765 43210",
+      "telephone": "+91 70103 96642",
       "email": "crabstertech@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -732,7 +732,7 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                     <input
                       type="tel"
                       required
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 70103 96642"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       disabled={loading}
