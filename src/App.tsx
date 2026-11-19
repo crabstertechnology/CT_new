@@ -164,9 +164,17 @@ export default function App() {
                   "@type": "Product",
                   "@id": "https://detach.crabstertech.in/#product",
                   "name": "Detach",
-                  "brand": { "@id": "https://www.crabstertech.in/#organization" },
+                  "image": "https://detach.crabstertech.in/assets/detach_hero_4k.webp",
                   "description": "Anti-Distraction Pocket Companion Hardware by Crabster Technology.",
-                  "url": "https://detach.crabstertech.in"
+                  "brand": { "@id": "https://www.crabstertech.in/#organization" },
+                  "url": "https://detach.crabstertech.in",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "INR",
+                    "availability": "https://schema.org/PreOrder",
+                    "url": "https://detach.crabstertech.in"
+                  }
                 }
               ]
             }}
