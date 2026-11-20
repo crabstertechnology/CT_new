@@ -41,6 +41,10 @@ export default function Footer({ onSelectService, onNavigateSection, onOpenConta
                 <img
                   src="/assets/crabster-logo.png"
                   alt="Crabster Technology Logo"
+                  width={44}
+                  height={46}
+                  loading="lazy"
+                  decoding="async"
                   className="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
                 />
                 <span className="text-base sm:text-lg font-black tracking-wider text-white uppercase">

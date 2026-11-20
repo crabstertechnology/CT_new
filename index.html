@@ -19,6 +19,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crabster Technology | Industrial IoT, Panels & Automation — Coimbatore</title>
     
+    <!-- Preload Hero LCP Image for blazing mobile performance -->
+    <link rel="preload" as="image" href="/assets/control-panel-hd.webp" type="image/webp" fetchpriority="high" />
+    
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="0krXcaS6SDG3zeZ2_xF6jhXc7Iiw_XIk3FK8C2U8d0k" />
 
@@ -84,10 +87,14 @@
     }
     </script>
 
-    <!-- Preconnect to Google Fonts for Inter -->
+    <!-- Preconnect & Non-render-blocking Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700;800;900&display=swap">
+    </noscript>
 
     <!-- Microsoft Clarity Analytics -->
     <script type="text/javascript">

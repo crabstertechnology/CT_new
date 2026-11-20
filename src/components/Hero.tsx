@@ -47,16 +47,20 @@ export default function Hero({ onOpenContact }) {
           {/* Right Column: 4K Crisp Control Panel Image - Sharp Edges */}
           <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-xl lg:max-w-none">
-              <div className="overflow-hidden rounded-none shadow-2xl border border-gray-200 bg-gray-100">
-                <img
-                  src="/assets/control-panel-hd.jpg"
-                  alt="Industrial Electrical Control Panel and PLC System by Crabster Technology"
-                  className="w-full h-auto object-cover object-center max-h-[520px] xl:max-h-[560px] rounded-none"
-                  loading="eager"
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "/assets/control-panel-4k.jpg";
-                  }}
-                />
+              <div className="overflow-hidden rounded-none shadow-2xl border border-gray-200 bg-gray-100 aspect-[1200/1194] w-full">
+                <picture>
+                  <source srcSet="/assets/control-panel-hd.webp" type="image/webp" />
+                  <img
+                    src="/assets/control-panel-hd.jpg"
+                    alt="Industrial Electrical Control Panel and PLC System by Crabster Technology"
+                    width={1200}
+                    height={1194}
+                    className="w-full h-auto object-cover object-center max-h-[520px] xl:max-h-[560px] rounded-none"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                </picture>
               </div>
             </div>
           </div>

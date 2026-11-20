@@ -7,35 +7,35 @@ export default function HowWeWorkSection() {
     {
       number: "01",
       title: "Requirement study",
-      image: "/assets/step-01-study.jpg",
+      image: "/assets/step-01-study.webp",
       description:
         "We walk the line with your team, watch how the work actually moves, and agree which problems are worth fixing first."
     },
     {
       number: "02",
       title: "Survey and scope",
-      image: "/assets/step-02-survey.jpg",
+      image: "/assets/step-02-survey.webp",
       description:
         "Machine list, measurements and a written scope, with hardware, programming and commissioning priced separately."
     },
     {
       number: "03",
       title: "Design and build",
-      image: "/assets/step-03-design.jpg",
+      image: "/assets/step-03-design.webp",
       description:
         "Panel design, embedded and IoT development, sensors and software, built and bench-tested in our workshop."
     },
     {
       number: "04",
       title: "Install and commission",
-      image: "/assets/step-04-install.jpg",
+      image: "/assets/step-04-install.webp",
       description:
         "Work is scheduled around your production plan. Panels are fitted, sensors wired, systems tested live with your operators."
     },
     {
       number: "05",
       title: "Handover and support",
-      image: "/assets/step-05-support.jpg",
+      image: "/assets/step-05-support.webp",
       description:
         "You keep the drawings, the code and access to your own data, with the same team to call when a machine behaves differently."
     }
@@ -111,12 +111,18 @@ export default function HowWeWorkSection() {
                       </p>
 
                       {/* Mobile View: Image right beneath respective content */}
-                      <div className="mt-4 mb-2 lg:hidden overflow-hidden rounded-none shadow-md border border-gray-200 bg-gray-100">
+                      <div className="mt-4 mb-2 lg:hidden overflow-hidden rounded-none shadow-md border border-gray-200 bg-gray-100 aspect-[3/2] w-full">
                         <img
                           src={step.image}
                           alt={`${step.title} - Crabster Technology Process`}
+                          width={900}
+                          height={600}
                           className="w-full h-auto object-cover object-center max-h-[300px]"
                           loading="lazy"
+                          decoding="async"
+                          onError={(e) => {
+                            (e.currentTarget as HTMLImageElement).src = step.image.replace('.webp', '.jpg');
+                          }}
                         />
                       </div>
                     </div>
@@ -134,7 +140,14 @@ export default function HowWeWorkSection() {
                 <img
                   src={steps[activeStep].image}
                   alt={`${steps[activeStep].title} - Crabster Technology Process`}
+                  width={900}
+                  height={600}
                   className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = steps[activeStep].image.replace('.webp', '.jpg');
+                  }}
                 />
               </div>
             </div>

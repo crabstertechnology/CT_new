@@ -42,7 +42,7 @@ const serviceDataMap = {
     subtitle: "Real-time visibility into machine uptime, cycle times, and floor bottlenecks without replacing existing machinery.",
     overview:
       "Most factories in Tamil Nadu run a mix of machine ages and brands. Our Industrial IoT solutions install non-invasively onto your existing machinery, pulling live operational data from lines that never had networking built-in. Within days, your operators and management gain clear, unambiguous shift visibility.",
-    image: "/assets/step-01-study.jpg",
+    image: "/assets/step-01-study.webp",
     badge: "Edge Hardware + Live Cloud / Floor TV",
     stats: [
       { label: "Deployment Time", value: "2–4 Days", sub: "Non-invasive installation" },
@@ -97,7 +97,7 @@ const serviceDataMap = {
     subtitle: "Custom-built, industrial-grade electrical and control panels designed, wired, and bench-tested in Coimbatore.",
     overview:
       "Stop fighting undocumented electrical cabinets with tangled wiring and obsolete components. We engineer fresh, clearly documented control panel boards tailored for your motors, drives, and machines. Every panel is 100% pre-tested in our Coimbatore workshop before it arrives on your floor.",
-    image: "/assets/control-panel-hd.jpg",
+    image: "/assets/control-panel-hd.webp",
     badge: "100% In-House CAD Design & Bench Testing",
     stats: [
       { label: "Testing Standard", value: "100%", sub: "Full simulated load pre-test" },
@@ -152,7 +152,7 @@ const serviceDataMap = {
     subtitle: "Automated temperature, pressure, and fluid control that eliminates human error and guarantees repeatable batch quality.",
     overview:
       "In processing facilities, a single batch variation can cause tens of thousands of rupees in scrapped output. Our process automation solutions take manual valve twisting and visual gauge watching out of the critical path, keeping your process variables within tight tolerances 24/7.",
-    image: "/assets/step-03-design.jpg",
+    image: "/assets/step-03-design.webp",
     badge: "Closed-Loop PID Control & Recipe Management",
     stats: [
       { label: "Batch Consistency", value: "±0.5%", sub: "Automated PID tolerance" },
@@ -207,7 +207,7 @@ const serviceDataMap = {
     subtitle: "Upgrading existing manual machinery with automated feeding, motion control, and safety systems.",
     overview:
       "You do not need to replace a reliable mechanical press, lathe, or packaging line just to achieve modern cycle speeds. We retrofit modern sensors, pneumatic actuation, and automated handling onto your existing lines, cutting cycle times and eliminating labor bottlenecks.",
-    image: "/assets/factory-machine-hd.jpg",
+    image: "/assets/factory-machine-hd.webp",
     badge: "Retrofits for Existing Lines Without Machine Replacement",
     stats: [
       { label: "Cycle Time Drop", value: "30–50%", sub: "Automated loading & ejection" },
@@ -458,7 +458,15 @@ export default function ServiceDetailPage({ serviceId, onBack, onNavigateService
                 <img
                   src={service.image}
                   alt={service.title}
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = service.image.replace('.webp', '.jpg');
+                  }}
                 />
               </div>
 

@@ -28,21 +28,24 @@ export default function ModernizeSection({ onOpenContact }) {
           {/* Left Column: 4K Crisp Machine Photo (No overlay badge) */}
           <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-start">
             <div className="relative w-full max-w-xl lg:max-w-none">
-              <div className="overflow-hidden rounded-none shadow-xl border border-gray-200 bg-gray-100 group relative">
+              <div className="overflow-hidden rounded-none shadow-xl border border-gray-200 bg-gray-100 group relative aspect-[1200/1440] w-full">
                 <button
                   type="button"
                   onClick={onOpenContact}
                   className="group relative block w-full text-left overflow-hidden rounded-none focus:outline-none"
                 >
-                  <img
-                    src="/assets/factory-machine-hd.jpg"
-                    alt="Industrial Machinery Retrofit with Digital Operator Terminal"
-                    className="w-full h-auto object-cover object-center max-h-[500px] xl:max-h-[560px] transition-transform duration-300 group-hover:scale-105"
-                    loading="eager"
-                    onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = "/assets/factory-machine-4k.jpg";
-                    }}
-                  />
+                  <picture>
+                    <source srcSet="/assets/factory-machine-hd.webp" type="image/webp" />
+                    <img
+                      src="/assets/factory-machine-hd.jpg"
+                      alt="Industrial Machinery Retrofit with Digital Operator Terminal"
+                      width={1200}
+                      height={1440}
+                      className="w-full h-auto object-cover object-center max-h-[500px] xl:max-h-[560px] transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 group-hover:bg-black/60 flex flex-col justify-end p-6 sm:p-8">
                     <span className="inline-block text-xs uppercase tracking-widest text-orange-400 font-semibold mb-1">
                       Action
